@@ -1,5 +1,5 @@
 const planICC = {
-    title: "Plan de Estudio ICC",
+    title: "Plan de estudio ICC",
     bloques: [
         {
             name: "I",
@@ -438,7 +438,7 @@ class PlanDeEstudio {
         this.structure = planStructure;
         this.nodes = {};
         this.container.classList.add("plancontainer");
-        let titleElement = document.createElement("H1");
+        let titleElement = document.createElement("H3");
         titleElement.innerHTML = this.structure.title;
         this.container.appendChild(
             titleElement
@@ -447,10 +447,10 @@ class PlanDeEstudio {
 
     createUX() {
         if (!this.structure) {
-            throw Error("Es necesario establecer un plan de estudio JSON");
+            throw Error("Es necesario establecer un plan de estudio JSON.");
         }
         if (!this.structure.bloques) {
-            throw Error("El plan no tiene bloques");
+            throw Error("El plan no tiene bloques.");
         }
         let bloquesUX = this.structure.bloques.map(
             (bloque) => {
