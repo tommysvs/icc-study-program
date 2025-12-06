@@ -39,6 +39,20 @@ const planICC = {
                     requisitos: [],
                     estado: "Aprobado",
                 },
+                {
+                    codigo: 'FI101',
+                    nombre: "Filosofía",
+                    creditos: 3,
+                    requisitos: [],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'ESVU1',
+                    nombre: "Seminario de Iniciación a la Vida Universitaria",
+                    creditos: 0,
+                    requisitos: [],
+                    estado: "Aprobado",
+                },
             ]
         },
         {
@@ -147,7 +161,7 @@ const planICC = {
                 },
                 {
                     codigo: 'FS201',
-                    nombre: "Fisica I",
+                    nombre: "Física I",
                     creditos: 3,
                     requisitos: ["MT101"],
                     estado: "Aprobado",
@@ -158,6 +172,13 @@ const planICC = {
                     creditos: 3,
                     requisitos: [],
                     estado: "Aprobado",
+                },
+                {
+                    codigo: 'CNFS1',
+                    nombre: "Laboratorio de Física I",
+                    creditos: 2,
+                    requisitos: ["FS201"],
+                    estado: "Cursando",
                 },
             ]
         },
@@ -237,6 +258,13 @@ const planICC = {
                     nombre: "Ética Profesional",
                     creditos: 3,
                     requisitos: ["CR201"],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'ESVU2',
+                    nombre: "Seminario de Madurez en la Vida Universitario",
+                    creditos: 1,
+                    requisitos: ["FI501"],
                     estado: "Aprobado",
                 },
             ]
@@ -397,6 +425,14 @@ const planICC = {
                     nombre: "Doctrina Social de la Iglesia",
                     creditos: 3,
                     requisitos: ["FI501"],
+                    estado: "Aprobado",
+                },
+
+                {
+                    codigo: 'ESVU3',
+                    nombre: "Seminario de Preparación a la Vida Profesional",
+                    creditos: 3,
+                    requisitos: ["CR501"],
                     estado: "Aprobado",
                 },
             ]

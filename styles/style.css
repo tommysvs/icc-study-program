@@ -22,7 +22,7 @@ header {
     flex-direction: column;
     gap: 1rem;
     padding:1rem;
-    background-color: #f6f6f6;
+    background-color: #fafafa;
     border-radius: 13px;
 }
 
@@ -37,7 +37,7 @@ header {
     gap: 1rem;
     align-items: center;
     border-radius: 5px;
-    background: linear-gradient(to right, #eeeeee, #f6f6f6);
+    background: linear-gradient(to right, #eceff1, #ffffff);
 }
 
 .plancontainer .bloque .bloque_label {
@@ -57,17 +57,44 @@ header {
 }
 .plancontainer .bloque .bloque_clases .bloqueClase {
     display: flex;
+    align-items: start;
+    justify-content: center;
     position: relative;
     flex-grow: 0;
     flex-shrink: 0;
     padding: 0.75rem;
     flex-direction: column;
     font-size: 0.75rem;
-    border: 1 solid #555;
+    border: 1px solid #555;
     box-shadow: 1px 1px 3px #cacaca;
     border-radius: 7px;
     width: 10rem;
     cursor: pointer;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    overflow: hidden;
+}
+
+.plancontainer .bloque .bloque_clases .bloqueClase span:nth-child(1) {
+    color: #444;
+}
+
+.plancontainer .bloque .bloque_clases .bloqueClase span:nth-child(2) {
+    font-weight: bold;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.plancontainer .bloque .bloque_clases .bloqueClase::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.45rem;
+    background-color: var(--estado-color, transparent);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 }
 
 .plancontainer .bloque .bloque_clases .bloqueClase:hover {
@@ -88,25 +115,13 @@ header {
     top: 0.5rem;
 }
 
-.estado-aprobado {
-    background-color: #d4edda;
-    color: #155724;
-}
+.estado-aprobado { --estado-color: #28a745; }
 
-.estado-reprobado {
-    background-color: #f8d7da;
-    color: #721c24;
-}
+.estado-reprobado { --estado-color: #dc3545; }
 
-.estado-pendiente {
-    background-color: #ffffff;
-    color: rgb(26, 26, 26);
-}
+.estado-pendiente { --estado-color: #6c757d; }
 
-.estado-cursando {
-    background-color: #fff3cd;
-    color: #856404;
-}
+.estado-cursando { --estado-color: #ffc107; }
 
 footer {
     background-color: #002080;
