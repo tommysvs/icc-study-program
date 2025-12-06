@@ -1,5 +1,5 @@
 const planICC = {
-    title: "Plan de estudio ICC",
+    title: "Plan de estudio",
     bloques: [
         {
             name: "I",
