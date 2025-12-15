@@ -178,7 +178,7 @@ const planICC = {
                     nombre: "Laboratorio de Física I",
                     creditos: 2,
                     requisitos: ["FS201"],
-                    estado: "Cursando",
+                    estado: "Aprobado",
                 },
             ]
         },
@@ -204,7 +204,7 @@ const planICC = {
                     nombre: "Programación en Entornos de Desarrollo Visual",
                     creditos: 3,
                     requisitos: ["IF301"],
-                    estado: "Reprobado",
+                    estado: "Cursando",
                 },
                 {
                     codigo: 'IF319',
@@ -317,7 +317,7 @@ const planICC = {
                     nombre: "Sistemas Ingeligentes para Negocios",
                     creditos: 3,
                     requisitos: ["IF342"],
-                    estado: "Cursando",
+                    estado: "Aprobado",
                 },
                 {
                     codigo: 'BG205',
@@ -331,7 +331,7 @@ const planICC = {
                     nombre: "Implementación de Sistemas de Software",
                     creditos: 3,
                     requisitos: ["IF314"],
-                    estado: "Cursando",
+                    estado: "Aprobado",
                 },
                 {
                     codigo: 'IF345',
@@ -357,7 +357,7 @@ const planICC = {
                     nombre: "Desarrollo de Portales Web I",
                     creditos: 3,
                     requisitos: ["IF340"],
-                    estado: "Cursando",
+                    estado: "Aprobado",
                 },
                 {
                     codigo: 'IF351',
@@ -378,13 +378,13 @@ const planICC = {
                     nombre: "Sistemas Operativos II",
                     creditos: 3,
                     requisitos: ["IF345"],
-                    estado: "Cursando",
+                    estado: "Aprobado",
                 },
                 {
                     codigo: 'IF381',
                     nombre: "Seminario de Hardware y Electricidad",
                     creditos: 3,
-                    requisitos: [],
+                    requisitos: ["IF370"],
                     estado: "Pendiente",
                 },
             ]
@@ -397,7 +397,7 @@ const planICC = {
                     nombre: "Desarrollo de Portales Web II",
                     creditos: 3,
                     requisitos: ["IF353"],
-                    estado: "Pendiente",
+                    estado: "Cursando",
                 },
                 {
                     codigo: 'IF355',
@@ -411,14 +411,14 @@ const planICC = {
                     nombre: "Control Estadístico de la Calidad",
                     creditos: 3,
                     requisitos: ["AD104"],
-                    estado: "Pendiente",
+                    estado: "Cursando",
                 },
                 {
                     codigo: 'IF356',
                     nombre: "Gestión y Estándares de Tecnología de Información",
                     creditos: 3,
                     requisitos: [],
-                    estado: "Pendiente",
+                    estado: "Cursando",
                 },
                 {
                     codigo: 'CR501',
@@ -513,7 +513,7 @@ const planICC = {
                     nombre: "Excel Avanzado para Ingenierías",
                     creditos: 3,
                     requisitos: [],
-                    estado: "Pendiente",
+                    estado: "Cursando",
                 },
             ]
         },
