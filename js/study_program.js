@@ -39,20 +39,6 @@ const planICC = {
                     requisitos: [],
                     estado: "Aprobado",
                 },
-                {
-                    codigo: 'FI101',
-                    nombre: "Filosofía",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
-                },
-                {
-                    codigo: 'ESVU1',
-                    nombre: "Seminario de Iniciación a la Vida Universitaria",
-                    creditos: 0,
-                    requisitos: [],
-                    estado: "Aprobado",
-                },
             ]
         },
         {
@@ -173,13 +159,6 @@ const planICC = {
                     requisitos: [],
                     estado: "Aprobado",
                 },
-                {
-                    codigo: 'CNFS1',
-                    nombre: "Laboratorio de Física I",
-                    creditos: 2,
-                    requisitos: ["FS201"],
-                    estado: "Aprobado",
-                },
             ]
         },
         {
@@ -258,13 +237,6 @@ const planICC = {
                     nombre: "Ética Profesional",
                     creditos: 3,
                     requisitos: ["CR201"],
-                    estado: "Aprobado",
-                },
-                {
-                    codigo: 'ESVU2',
-                    nombre: "Seminario de Madurez en la Vida Universitario",
-                    creditos: 1,
-                    requisitos: ["FI501"],
                     estado: "Aprobado",
                 },
             ]
@@ -427,14 +399,6 @@ const planICC = {
                     requisitos: ["FI501"],
                     estado: "Aprobado",
                 },
-
-                {
-                    codigo: 'ESVU3',
-                    nombre: "Seminario de Preparación a la Vida Profesional",
-                    creditos: 3,
-                    requisitos: ["CR501"],
-                    estado: "Aprobado",
-                },
             ]
         },
         {
@@ -514,6 +478,119 @@ const planICC = {
                     creditos: 3,
                     requisitos: [],
                     estado: "Cursando",
+                },
+            ]
+        },
+        {
+            name: "XIII",
+            asignaturas: [
+                {
+                    codigo: 'IF400',
+                    nombre: "Práctica Profesional Supervisada",
+                    creditos: 0,
+                    requisitos: [],
+                    estado: "Pendiente",
+                },
+            ]
+        },
+        {
+            name: "CPG.",
+            asignaturas: [
+                {
+                    codigo: 'CNFS1',
+                    nombre: "Laboratorio de Física I",
+                    creditos: 2,
+                    requisitos: ["FS201"],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'IGTM1',
+                    nombre: "Taller y Mantenimiento de Computadoras",
+                    creditos: 1,
+                    requisitos: [],
+                    estado: "Aprobado",
+                },                
+                {
+                    codigo: 'CTPT1',
+                    nombre: "Pintura I",
+                    creditos: 1,
+                    requisitos: [],
+                    estado: "Aprobado",
+                },                
+                {
+                    codigo: 'CSHD1',
+                    nombre: "Htas. de Diseño y Maquinado ASISA",
+                    creditos: 3,
+                    requisitos: [],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'IDIN1',
+                    nombre: "Inglés (Principiante)",
+                    creditos: 6,
+                    requisitos: [],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'IDIN2',
+                    nombre: "Inglés (Intermedio Bajo)",
+                    creditos: 6,
+                    requisitos: ["IDIN1"],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'IDIN3',
+                    nombre: "Inglés (Intermedio Alto)",
+                    creditos: 6,
+                    requisitos: ["IDIN2"],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'IDIN4',
+                    nombre: "Inglés (Avanzado)",
+                    creditos: 6,
+                    requisitos: ["IDIN3"],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'IDIN5',
+                    nombre: "Inglés (Vocabulario y Lectura Técnica)",
+                    creditos: 6,
+                    requisitos: ["IDIN4"],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'IDIN6',
+                    nombre: "Inglés (Composición y Conversación)",
+                    creditos: 6,
+                    requisitos: ["IDIN5"],
+                    estado: "Aprobado",
+                },
+            ]
+        },
+        {
+            name: "SEM.",
+            asignaturas: [
+                {
+                    codigo: 'ESVU1',
+                    nombre: "Seminario de Iniciación a la Vida Universitaria",
+                    creditos: 0,
+                    requisitos: [],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'ESVU2',
+                    nombre: "Seminario de Madurez en la Vida Universitario",
+                    creditos: 1,
+                    requisitos: ["FI501"],
+                    estado: "Aprobado",
+                },
+                {
+                    codigo: 'ESVU3',
+                    nombre: "Seminario de Preparación a la Vida Profesional",
+                    creditos: 1,
+                    requisitos: ["CR501"],
+                    estado: "Aprobado",
                 },
             ]
         },
