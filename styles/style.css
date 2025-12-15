@@ -13,16 +13,22 @@ header {
     color: white;
     padding: 0.3rem;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-header h3 {
-    margin-bottom: 0;
-    font-size: 1.5rem;
+.logo {
+    height: 60px;
+    width: auto;
+    flex-shrink: 0;
 }
 
-header h4 {
-    margin-top: 0.5rem;
-    font-weight: normal;
+.header-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    text-align: center;
 }
 
 .plancontainer{
@@ -56,6 +62,29 @@ header h4 {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+}
+
+.plancontainer .bloque .bloque_label.collapsible {
+    width: auto;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s ease;
+}
+
+.plancontainer .bloque .bloque_label.collapsible:hover {
+    background-color: rgba(0, 32, 128, 0.1);
+    border-radius: 5px;
+}
+
+.plancontainer .bloque .bloque_label.collapsible .toggle-icon {
+    display: inline-block;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+    font-size: 0.7rem;
+}
+
+.plancontainer .bloque .bloque_label.collapsible.active .toggle-icon {
+    transform: rotate(180deg);
 }
 
 .plancontainer .bloque .bloque_clases {
@@ -178,6 +207,26 @@ footer {
     header {
         padding: 0.5rem;
         font-size: 0.9rem;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .logo {
+        flex-shrink: 0;
+    }
+
+    .header-text {
+        flex: 1;
+        text-align: left;
+        min-width: 0;
+    }
+
+    .header-text h3 {
+        margin: 0;
+        font-size: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .plancontainer h3 {

@@ -629,10 +629,28 @@ class PlanDeEstudio {
             (bloque) => {
                 const contendorBloque = document.createElement("div");
                 contendorBloque.classList.add("bloque");
+                
                 const labelBloque = document.createElement("div");
-                labelBloque.innerHTML = bloque.name;
                 labelBloque.classList.add("bloque_label");
+                
+                if (bloque.name === "CPG." || bloque.name === "SEM.") {
+                    labelBloque.classList.add("collapsible");
+                    labelBloque.innerHTML = `<span class="toggle-icon">▼</span> ${bloque.name}`;
+                } else {
+                    labelBloque.innerHTML = bloque.name;
+                }
+                
                 const asignaturasBloque = this.createAsignaturasUX(bloque.asignaturas);
+                
+                if (bloque.name === "CPG." || bloque.name === "SEM.") {
+                    asignaturasBloque.style.display = "none";
+                    labelBloque.addEventListener("click", (e) => {
+                        const isHidden = asignaturasBloque.style.display === "none";
+                        asignaturasBloque.style.display = isHidden ? "flex" : "none";
+                        labelBloque.classList.toggle("active");
+                    });
+                }
+                
                 contendorBloque.appendChild(labelBloque);
                 contendorBloque.appendChild(asignaturasBloque);
                 return contendorBloque;
