@@ -31,7 +31,7 @@ header {
     text-align: center;
 }
 
-.plancontainer{
+.plancontainer {
     margin: 1rem auto;
     max-width: 1024px;
     display: flex;
@@ -44,6 +44,99 @@ header {
 
 .plancontainer h3 {
     text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.badges-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.badge-divider {
+    width: 2px;
+    height: 30px;
+    background-color: #ccc;
+    margin: 0 0.5rem;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.badge:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+.badge-aprobadas {
+    background-color: #2E8B6F;
+    color: white;
+    box-shadow: 0 2px 6px rgba(46, 139, 111, 0.3);
+}
+
+.badge-aprobadas:hover {
+    box-shadow: 0 4px 12px rgba(46, 139, 111, 0.5);
+}
+
+.badge-aprobadas strong {
+    font-size: 1rem;
+    margin-right: 0.3rem;
+}
+
+.badge-restantes {
+    background-color: #5B8FC7;
+    color: white;
+    box-shadow: 0 2px 6px rgba(91, 143, 199, 0.3);
+}
+
+.badge-restantes:hover {
+    box-shadow: 0 4px 12px rgba(91, 143, 199, 0.5);
+}
+
+.badge-restantes strong {
+    font-size: 1rem;
+    margin-right: 0.3rem;
+}
+
+.badge-total {
+    background-color: #37474F;
+    color: white;
+    box-shadow: 0 2px 6px rgba(55, 71, 79, 0.3);
+}
+
+.badge-total:hover {
+    box-shadow: 0 4px 12px rgba(55, 71, 79, 0.5);
+}
+
+.badge-total strong {
+    font-size: 1rem;
+    margin-right: 0.3rem;
+}
+
+.badge-carrera {
+    background-color: #8B6BB1;
+    color: white;
+    box-shadow: 0 2px 6px rgba(139, 107, 177, 0.3);
+}
+
+.badge-carrera:hover {
+    box-shadow: 0 4px 12px rgba(139, 107, 177, 0.5);
+}
+
+.badge-carrera strong {
+    font-size: 1rem;
+    margin-right: 0.3rem;
 }
 
 .plancontainer .bloque {
@@ -105,13 +198,13 @@ header {
     flex-direction: column;
     font-size: 0.75rem;
     border: 1px solid #555;
-    box-shadow: 1px 1px 3px #cacaca;
     border-radius: 7px;
     width: 10rem;
     cursor: pointer;
     background-color: #ffffff;
     color: #1a1a1a;
     overflow: hidden;
+    transition: all 0.3s ease;
 }
 
 .plancontainer .bloque .bloque_clases .bloqueClase span:nth-child(1) {
@@ -138,6 +231,7 @@ header {
 
 .plancontainer .bloque .bloque_clases .bloqueClase:hover {
     background-color: rgba(254, 255, 212, 0.9);
+    transform: translateY(-3px);
 }
 
 .plancontainer .bloque .bloque_clases .bloqueClase.clase_requisito{
@@ -154,13 +248,41 @@ header {
     top: 0.5rem;
 }
 
-.estado-aprobado { --estado-color: #28a745; }
+.estado-aprobado { 
+    --estado-color: #28a745;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3);
+}
 
-.estado-reprobado { --estado-color: #dc3545; }
+.estado-aprobado:hover {
+    box-shadow: 0 4px 12px rgba(40, 167, 69, 0.5);
+}
 
-.estado-pendiente { --estado-color: #9ea3a7; }
+.estado-reprobado { 
+    --estado-color: #dc3545;
+    box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3);
+}
 
-.estado-cursando { --estado-color: #ffc107; }
+.estado-reprobado:hover {
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.5);
+}
+
+.estado-pendiente { 
+    --estado-color: #9ea3a7;
+    box-shadow: 0 2px 6px rgba(158, 163, 167, 0.3);
+}
+
+.estado-pendiente:hover {
+    box-shadow: 0 4px 12px rgba(158, 163, 167, 0.5);
+}
+
+.estado-cursando { 
+    --estado-color: #ffc107;
+    box-shadow: 0 2px 6px rgba(255, 193, 7, 0.3);
+}
+
+.estado-cursando:hover {
+    box-shadow: 0 4px 12px rgba(255, 193, 7, 0.5);
+}
 
 footer {
     display: flex;
@@ -242,5 +364,31 @@ footer {
 
     .plancontainer .bloque .bloque_clases {
         gap: 0.5rem;
+    }
+
+    .badges-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        justify-content: space-evenly;
+    }
+
+    .badge {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        flex: 0 1 45%;
+        text-align: center;
+    }
+
+    .badge-divider {
+        width: 100%;
+        height: 1px;
+        background-color: #ccc;
+        margin: 0;
+        display: none;
+    }
+
+    .badge strong {
+        font-size: 0.95rem;
     }
 }

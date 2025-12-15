@@ -611,11 +611,64 @@ class PlanDeEstudio {
         this.structure = planStructure;
         this.nodes = {};
         this.container.classList.add("plancontainer");
+        
+        let totalAsignaturas = 0;
+        let aprobadas = 0;
+        let totalSinExtras = 0;
+        let aprobadasSinExtras = 0;
+        
+        this.structure.bloques.forEach(bloque => {
+            bloque.asignaturas.forEach(asignatura => {
+                if (bloque.name !== "XIII") {
+                    totalAsignaturas++;
+                    if (asignatura.estado === "Aprobado") {
+                        aprobadas++;
+                    }
+                }
+                
+                if (bloque.name !== "CPG." && bloque.name !== "SEM." && bloque.name !== "XIII") {
+                    totalSinExtras++;
+                    if (asignatura.estado === "Aprobado") {
+                        aprobadasSinExtras++;
+                    }
+                }
+            });
+        });
+        
         let titleElement = document.createElement("H3");
         titleElement.innerHTML = this.structure.title;
-        this.container.appendChild(
-            titleElement
-        );
+        this.container.appendChild(titleElement);
+        
+        const badgesDiv = document.createElement("div");
+        badgesDiv.classList.add("badges-container");
+        
+        const badgeAprobadas = document.createElement("span");
+        badgeAprobadas.classList.add("badge", "badge-aprobadas");
+        badgeAprobadas.innerHTML = `<strong>${aprobadas}</strong> Aprobadas`;
+        
+        const badgeRestantes = document.createElement("span");
+        badgeRestantes.classList.add("badge", "badge-restantes");
+        badgeRestantes.innerHTML = `<strong>${totalAsignaturas - aprobadas}</strong> Restantes`;
+        
+        const badgeTotal = document.createElement("span");
+        badgeTotal.classList.add("badge", "badge-total");
+        badgeTotal.innerHTML = `<strong>${totalAsignaturas}</strong> Total`;
+        
+        const badgeCarrera = document.createElement("span");
+        badgeCarrera.classList.add("badge", "badge-carrera");
+        badgeCarrera.innerHTML = `<strong>${aprobadasSinExtras}/${totalSinExtras}</strong> Carrera`;
+        
+        badgesDiv.appendChild(badgeCarrera);
+        badgesDiv.appendChild(badgeRestantes);
+        
+        const divider = document.createElement("div");
+        divider.classList.add("badge-divider");
+        badgesDiv.appendChild(divider);
+
+        badgesDiv.appendChild(badgeAprobadas);
+        badgesDiv.appendChild(badgeTotal);
+        
+        this.container.appendChild(badgesDiv);
     }
 
     createUX() {
