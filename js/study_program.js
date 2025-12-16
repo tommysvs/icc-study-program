@@ -383,7 +383,7 @@ const studyProgramICC = {
                     name: "Control Estadístico de la Calidad",
                     credits: 3,
                     requisites: ["AD104"],
-                    status: "Cursando",
+                    status: "Pendiente",
                 },
                 {
                     code: 'IF356',
@@ -477,7 +477,7 @@ const studyProgramICC = {
                     name: "Excel Avanzado para Ingenierías",
                     credits: 3,
                     requisites: [],
-                    status: "Cursando",
+                    status: "Pendiente",
                 },
             ]
         },
@@ -604,7 +604,7 @@ const studyProgramICC = {
                     name: "Trabajo Educativo Social",
                     credits: 2,
                     requisites: ["CR501"],
-                    status: "Aprobado",
+                    status: "Pendiente",
                 },
             ]
         },
@@ -633,7 +633,7 @@ class StudyProgram {
         
         this.structure.blocks.forEach(block => {
             block.courses.forEach(course => {
-                if (block.name !== "XIII") {
+                if (block.name !== "XIII" && block.name !== "SEM.") {
                     totalCourses++;
                     if (course.status === "Aprobado") {
                         approved++;
