@@ -653,36 +653,14 @@ class StudyProgram {
         titleElement.innerHTML = this.structure.title;
         this.container.appendChild(titleElement);
         
-        const badgesDiv = document.createElement("div");
-        badgesDiv.classList.add("badges-container");
+        document.getElementById("badgeApprovedCount").textContent = approved;
+        document.getElementById("badgeRemainingCount").textContent = totalCourses - approved;
+        document.getElementById("badgeTotalCount").textContent = totalCourses;
+        document.getElementById("badgeProgramCount").textContent = `${approvedWithoutExtras}/${totalWithoutExtras}`;
         
-        const badgeApproved = document.createElement("span");
-        badgeApproved.classList.add("badge", "badge-approved");
-        badgeApproved.innerHTML = `<strong>${approved}</strong> Aprobadas`;
-        
-        const badgeRemaining = document.createElement("span");
-        badgeRemaining.classList.add("badge", "badge-remaining");
-        badgeRemaining.innerHTML = `<strong>${totalCourses - approved}</strong> Restantes`;
-        
-        const badgeTotal = document.createElement("span");
-        badgeTotal.classList.add("badge", "badge-total");
-        badgeTotal.innerHTML = `<strong>${totalCourses}</strong> Total`;
-        
-        const badgeProgram = document.createElement("span");
-        badgeProgram.classList.add("badge", "badge-program");
-        badgeProgram.innerHTML = `<strong>${approvedWithoutExtras}/${totalWithoutExtras}</strong> Carrera`;
-        
-        badgesDiv.appendChild(badgeProgram);
-        badgesDiv.appendChild(badgeRemaining);
-        
-        const divider = document.createElement("div");
-        divider.classList.add("badge-divider");
-        badgesDiv.appendChild(divider);
-
-        badgesDiv.appendChild(badgeApproved);
-        badgesDiv.appendChild(badgeTotal);
-        
-        this.container.appendChild(badgesDiv);
+        const percentage = Math.round((approvedWithoutExtras / totalWithoutExtras) * 100);
+        document.getElementById("profilePercentage").textContent = `${percentage}%`;
+        document.getElementById("profileProgressFill").style.width = `${percentage}%`;
         
         const statusIndicadores = document.createElement("div");
         statusIndicadores.classList.add("status-indicators");

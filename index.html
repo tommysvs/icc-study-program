@@ -21,6 +21,40 @@
         </div>
     </header>
     <main>
+        <aside class="profile-sidebar">
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <img src="assets/img/pp.bmp" alt="Tommy Vega Profile Picture">
+                </div>
+                <h2 class="profile-name">Tommy Vega</h2>
+                <p class="profile-title">Estudiante</p>
+
+                <div class="profile-progress">
+                    <div class="progress-label">
+                        <span>Progreso</span>
+                        <span id="profilePercentage">0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="profileProgressFill" style="width: 0%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-badges">
+                <div class="badge badge-program">
+                    <strong id="badgeProgramCount">0/0</strong>Carrera
+                </div>
+                <div class="badge badge-remaining">
+                    <strong id="badgeRemainingCount">0</strong>Restantes
+                </div>
+                <div class="badge badge-approved">
+                    <strong id="badgeApprovedCount">0</strong>Aprobadas
+                </div>
+                <div class="badge badge-total">
+                    <strong id="badgeTotalCount">0</strong>Total
+                </div>
+            </div>
+        </aside>
         <section id="programContainer"></section>
     </main>
     <footer>
