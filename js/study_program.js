@@ -1,635 +1,649 @@
-const planICC = {
+const studyProgramICC = {
     title: "Plan de estudio",
-    bloques: [
+    blocks: [
         {
             name: "I",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'ES101',
-                    nombre: "Español",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'ES101',
+                    name: "Español",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'MT101',
-                    nombre: "Matemáticas",
-                    creditos: 4,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'MT101',
+                    name: "Matemáticas",
+                    credits: 4,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF112',
-                    nombre: "Introducción a las Ciencias de la Computación",
-                    creditos: 4,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'IF112',
+                    name: "Introducción a las Ciencias de la Computación",
+                    credits: 4,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'SC101',
-                    nombre: "Sociología",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'SC101',
+                    name: "Sociología",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'FI101',
-                    nombre: "Filosofía",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'FI101',
+                    name: "Filosofía",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
             ]
         },
         {
             name: "II",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'ES201',
-                    nombre: "Expresión Oral y Escrita",
-                    creditos: 3,
-                    requisitos: ["ES101"],
-                    estado: "Aprobado",
+                    code: 'ES201',
+                    name: "Expresión Oral y Escrita",
+                    credits: 3,
+                    requisites: ["ES101"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'MT201',
-                    nombre: "Precálculo",
-                    creditos: 4,
-                    requisitos: ["MT101"],
-                    estado: "Aprobado",
+                    code: 'MT201',
+                    name: "Precálculo",
+                    credits: 4,
+                    requisites: ["MT101"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF200',
-                    nombre: "Fundamentos y Lógica de Programación",
-                    creditos: 4,
-                    requisitos: ["IF112"],
-                    estado: "Aprobado",
+                    code: 'IF200',
+                    name: "Fundamentos y Lógica de Programación",
+                    credits: 4,
+                    requisites: ["IF112"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'HS101',
-                    nombre: "Historia de Honduras",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'HS101',
+                    name: "Historia de Honduras",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'CR201',
-                    nombre: "El Hombre Frente a la Vida",
-                    creditos: 3,
-                    requisitos: ["FI101"],
-                    estado: "Aprobado",
+                    code: 'CR201',
+                    name: "El Hombre Frente a la Vida",
+                    credits: 3,
+                    requisites: ["FI101"],
+                    status: "Aprobado",
                 },
             ]
         },
         {
             name: "III",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'MT202',
-                    nombre: "Estadística I",
-                    creditos: 4,
-                    requisitos: ["MT101"],
-                    estado: "Aprobado",
+                    code: 'MT202',
+                    name: "Estadística I",
+                    credits: 4,
+                    requisites: ["MT101"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'MT303',
-                    nombre: "Cálculo I",
-                    creditos: 4,
-                    requisitos: ["MT201"],
-                    estado: "Aprobado",
+                    code: 'MT303',
+                    name: "Cálculo I",
+                    credits: 4,
+                    requisites: ["MT201"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF214',
-                    nombre: "Programación Estructurada I",
-                    creditos: 3,
-                    requisitos: ["IF200"],
-                    estado: "Aprobado",
+                    code: 'IF214',
+                    name: "Programación Estructurada I",
+                    credits: 3,
+                    requisites: ["IF200"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF213',
-                    nombre: "Estructuras Discretas",
-                    creditos: 3,
-                    requisitos: ["IF200"],
-                    estado: "Aprobado",
+                    code: 'IF213',
+                    name: "Estructuras Discretas",
+                    credits: 3,
+                    requisites: ["IF200"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF394',
-                    nombre: "Diseño Gráfico",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'IF394',
+                    name: "Diseño Gráfico",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
             ]
         },
         {
             name: "IV",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'AD302',
-                    nombre: "Métodos y Técnicas de Investigación",
-                    creditos: 3,
-                    requisitos: ["MT202"],
-                    estado: "Aprobado",
+                    code: 'AD302',
+                    name: "Métodos y Técnicas de Investigación",
+                    credits: 3,
+                    requisites: ["MT202"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'MT401',
-                    nombre: "Cálculo II",
-                    creditos: 4,
-                    requisitos: ["MT303"],
-                    estado: "Pendiente",
+                    code: 'MT401',
+                    name: "Cálculo II",
+                    credits: 4,
+                    requisites: ["MT303"],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'IF301',
-                    nombre: "Programación Estructurada II",
-                    creditos: 3,
-                    requisitos: ["IF214"],
-                    estado: "Aprobado",
+                    code: 'IF301',
+                    name: "Programación Estructurada II",
+                    credits: 3,
+                    requisites: ["IF214"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'FS201',
-                    nombre: "Física I",
-                    creditos: 3,
-                    requisitos: ["MT101"],
-                    estado: "Aprobado",
+                    code: 'FS201',
+                    name: "Física I",
+                    credits: 3,
+                    requisites: ["MT101"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'EL101',
-                    nombre: "Administración",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'EL101',
+                    name: "Administración",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
             ]
         },
         {
             name: "V",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'IF322',
-                    nombre: "Base de Datos I",
-                    creditos: 34,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'IF322',
+                    name: "Base de Datos I",
+                    credits: 34,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'CT201',
-                    nombre: "Contabilidad",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Reprobado",
+                    code: 'CT201',
+                    name: "Contabilidad",
+                    credits: 3,
+                    requisites: [],
+                    status: "Reprobado",
                 },
                 {
-                    codigo: 'IF325',
-                    nombre: "Programación en Entornos de Desarrollo Visual",
-                    creditos: 3,
-                    requisitos: ["IF301"],
-                    estado: "Cursando",
+                    code: 'IF325',
+                    name: "Programación en Entornos de Desarrollo Visual",
+                    credits: 3,
+                    requisites: ["IF301"],
+                    status: "Cursando",
                 },
                 {
-                    codigo: 'IF319',
-                    nombre: "Principios de Electrónica",
-                    creditos: 3,
-                    requisitos: ["FS201"],
-                    estado: "Aprobado",
+                    code: 'IF319',
+                    name: "Principios de Electrónica",
+                    credits: 3,
+                    requisites: ["FS201"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'MT204',
-                    nombre: "Matemática Financiera",
-                    creditos: 3,
-                    requisitos: ["MT101"],
-                    estado: "Aprobado",
+                    code: 'MT204',
+                    name: "Matemática Financiera",
+                    credits: 3,
+                    requisites: ["MT101"],
+                    status: "Aprobado",
                 },
             ]
         },
         {
             name: "VI",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'IF327',
-                    nombre: "Base de Datos II",
-                    creditos: 3,
-                    requisitos: ["IF322"],
-                    estado: "Aprobado",
+                    code: 'IF327',
+                    name: "Base de Datos II",
+                    credits: 3,
+                    requisites: ["IF322"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF212',
-                    nombre: "Análisis y Diseño de Sistemas",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'IF212',
+                    name: "Análisis y Diseño de Sistemas",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF323',
-                    nombre: "Redes I",
-                    creditos: 4,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'IF323',
+                    name: "Redes I",
+                    credits: 4,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF324',
-                    nombre: "Circuitos Lógicos",
-                    creditos: 3,
-                    requisitos: [], 
-                    estado: "Pendiente",
+                    code: 'IF324',
+                    name: "Circuitos Lógicos",
+                    credits: 3,
+                    requisites: [], 
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'FI501',
-                    nombre: "Ética Profesional",
-                    creditos: 3,
-                    requisitos: ["CR201"],
-                    estado: "Aprobado",
+                    code: 'FI501',
+                    name: "Ética Profesional",
+                    credits: 3,
+                    requisites: ["CR201"],
+                    status: "Aprobado",
                 },
             ]
         },
         {
             name: "VII",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'IF342',
-                    nombre: "Base de Datos Multidimensional",
-                    creditos: 3,
-                    requisitos: ["IF327"],
-                    estado: "Aprobado",
+                    code: 'IF342',
+                    name: "Base de Datos Multidimensional",
+                    credits: 3,
+                    requisites: ["IF327"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF340',
-                    nombre: "Programación Multiplataforma",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'IF340',
+                    name: "Programación Multiplataforma",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF314',
-                    nombre: "Desarrollo de Software",
-                    creditos: 4,
-                    requisitos: ["IF212"],
-                    estado: "Aprobado",
+                    code: 'IF314',
+                    name: "Desarrollo de Software",
+                    credits: 4,
+                    requisites: ["IF212"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF328',
-                    nombre: "Redes II",
-                    creditos: 3,
-                    requisitos: ["IF323"], 
-                    estado: "Pendiente",
+                    code: 'IF328',
+                    name: "Redes II",
+                    credits: 3,
+                    requisites: ["IF323"], 
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'IF329',
-                    nombre: "Sistemas Automatizados",
-                    creditos: 3,
-                    requisitos: ["IF324"],
-                    estado: "Pendiente",
+                    code: 'IF329',
+                    name: "Sistemas Automatizados",
+                    credits: 3,
+                    requisites: ["IF324"],
+                    status: "Pendiente",
                 },
             ]
         },
         {
             name: "VIII",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'IF391',
-                    nombre: "Sistemas Ingeligentes para Negocios",
-                    creditos: 3,
-                    requisitos: ["IF342"],
-                    estado: "Aprobado",
+                    code: 'IF391',
+                    name: "Sistemas Ingeligentes para Negocios",
+                    credits: 3,
+                    requisites: ["IF342"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'BG205',
-                    nombre: "Ecología",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'BG205',
+                    name: "Ecología",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF346',
-                    nombre: "Implementación de Sistemas de Software",
-                    creditos: 3,
-                    requisitos: ["IF314"],
-                    estado: "Aprobado",
+                    code: 'IF346',
+                    name: "Implementación de Sistemas de Software",
+                    credits: 3,
+                    requisites: ["IF314"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF345',
-                    nombre: "Sistemas Operativos I",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'IF345',
+                    name: "Sistemas Operativos I",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF370',
-                    nombre: "Microcontroladores",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Pendiente",
+                    code: 'IF370',
+                    name: "Microcontroladores",
+                    credits: 3,
+                    requisites: [],
+                    status: "Pendiente",
                 },
             ]
         },
         {
             name: "IX",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'IF353',
-                    nombre: "Desarrollo de Portales Web I",
-                    creditos: 3,
-                    requisitos: ["IF340"],
-                    estado: "Aprobado",
+                    code: 'IF353',
+                    name: "Desarrollo de Portales Web I",
+                    credits: 3,
+                    requisites: ["IF340"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF351',
-                    nombre: "Programación Móvil I",
-                    creditos: 4,
-                    requisitos: [],
-                    estado: "Pendiente",
+                    code: 'IF351',
+                    name: "Programación Móvil I",
+                    credits: 4,
+                    requisites: [],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'AD104',
-                    nombre: "Gestión de la Calidad Total",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'AD104',
+                    name: "Gestión de la Calidad Total",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF352',
-                    nombre: "Sistemas Operativos II",
-                    creditos: 3,
-                    requisitos: ["IF345"],
-                    estado: "Aprobado",
+                    code: 'IF352',
+                    name: "Sistemas Operativos II",
+                    credits: 3,
+                    requisites: ["IF345"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IF381',
-                    nombre: "Seminario de Hardware y Electricidad",
-                    creditos: 3,
-                    requisitos: ["IF370"],
-                    estado: "Pendiente",
+                    code: 'IF381',
+                    name: "Seminario de Hardware y Electricidad",
+                    credits: 3,
+                    requisites: ["IF370"],
+                    status: "Pendiente",
                 },
             ]
         },
         {
             name: "X",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'IF357',
-                    nombre: "Desarrollo de Portales Web II",
-                    creditos: 3,
-                    requisitos: ["IF353"],
-                    estado: "Cursando",
+                    code: 'IF357',
+                    name: "Desarrollo de Portales Web II",
+                    credits: 3,
+                    requisites: ["IF353"],
+                    status: "Cursando",
                 },
                 {
-                    codigo: 'IF355',
-                    nombre: "Programación Móvil II",
-                    creditos: 3,
-                    requisitos: ["IF351"],
-                    estado: "Pendiente",
+                    code: 'IF355',
+                    name: "Programación Móvil II",
+                    credits: 3,
+                    requisites: ["IF351"],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'MT304',
-                    nombre: "Control Estadístico de la Calidad",
-                    creditos: 3,
-                    requisitos: ["AD104"],
-                    estado: "Cursando",
+                    code: 'MT304',
+                    name: "Control Estadístico de la Calidad",
+                    credits: 3,
+                    requisites: ["AD104"],
+                    status: "Cursando",
                 },
                 {
-                    codigo: 'IF356',
-                    nombre: "Gestión y Estándares de Tecnología de Información",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Cursando",
+                    code: 'IF356',
+                    name: "Gestión y Estándares de Tecnología de Información",
+                    credits: 3,
+                    requisites: [],
+                    status: "Cursando",
                 },
                 {
-                    codigo: 'CR501',
-                    nombre: "Doctrina Social de la Iglesia",
-                    creditos: 3,
-                    requisitos: ["FI501"],
-                    estado: "Aprobado",
+                    code: 'CR501',
+                    name: "Doctrina Social de la Iglesia",
+                    credits: 3,
+                    requisites: ["FI501"],
+                    status: "Aprobado",
                 },
             ]
         },
         {
             name: "XI",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'IF362',
-                    nombre: "Negocios Web",
-                    creditos: 3,
-                    requisitos: ["IF357"],
-                    estado: "Pendiente",
+                    code: 'IF362',
+                    name: "Negocios Web",
+                    credits: 3,
+                    requisites: ["IF357"],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'IF347',
-                    nombre: "Programación de Negocios",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Pendiente",
+                    code: 'IF347',
+                    name: "Programación de Negocios",
+                    credits: 3,
+                    requisites: [],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'AD402',
-                    nombre: "Planeación y Diseño de un Modelo de Calidad",
-                    creditos: 3,
-                    requisitos: ["MT304"],
-                    estado: "Pendiente",
+                    code: 'AD402',
+                    name: "Planeación y Diseño de un Modelo de Calidad",
+                    credits: 3,
+                    requisites: ["MT304"],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'IF360',
-                    nombre: "Seguridad Informática y Gestión del Riesgo",
-                    creditos: 3,
-                    requisitos: ["IF356"],
-                    estado: "Pendiente",
+                    code: 'IF360',
+                    name: "Seguridad Informática y Gestión del Riesgo",
+                    credits: 3,
+                    requisites: ["IF356"],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'IF358',
-                    nombre: "Administración de Centros de Cómputo",
-                    creditos: 3,
-                    requisitos: ["IF356"],
-                    estado: "Pendiente",
+                    code: 'IF358',
+                    name: "Administración de Centros de Cómputo",
+                    credits: 3,
+                    requisites: ["IF356"],
+                    status: "Pendiente",
                 },
             ]
         },
         {
             name: "XII",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'IF361',
-                    nombre: "Seminario Taller de Software",
-                    creditos: 3,
-                    requisitos: ["IF362"],
-                    estado: "Pendiente",
+                    code: 'IF361',
+                    name: "Seminario Taller de Software",
+                    credits: 3,
+                    requisites: ["IF362"],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'IF392',
-                    nombre: "Gestión de Proyectos Informáticos",
-                    creditos: 3,
-                    requisitos: ["IF347"],
-                    estado: "Pendiente",
+                    code: 'IF392',
+                    name: "Gestión de Proyectos Informáticos",
+                    credits: 3,
+                    requisites: ["IF347"],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'IF350',
-                    nombre: "Big Data",
-                    creditos: 3,
-                    requisitos: ["IF391"],
-                    estado: "Pendiente",
+                    code: 'IF350',
+                    name: "Big Data",
+                    credits: 3,
+                    requisites: ["IF391"],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'IF380',
-                    nombre: "Auditoría de Sistemas de Información",
-                    creditos: 3,
-                    requisitos: ["IF360"],
-                    estado: "Pendiente",
+                    code: 'IF380',
+                    name: "Auditoría de Sistemas de Información",
+                    credits: 3,
+                    requisites: ["IF360"],
+                    status: "Pendiente",
                 },
                 {
-                    codigo: 'IF393',
-                    nombre: "Excel Avanzado para Ingenierías",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Cursando",
+                    code: 'IF393',
+                    name: "Excel Avanzado para Ingenierías",
+                    credits: 3,
+                    requisites: [],
+                    status: "Cursando",
                 },
             ]
         },
         {
             name: "XIII",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'IF400',
-                    nombre: "Práctica Profesional Supervisada",
-                    creditos: 0,
-                    requisitos: [],
-                    estado: "Pendiente",
+                    code: 'IF400',
+                    name: "Práctica Profesional Supervisada",
+                    credits: 0,
+                    requisites: [],
+                    status: "Pendiente",
                 },
             ]
         },
         {
             name: "CPG.",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'CNFS1',
-                    nombre: "Laboratorio de Física I",
-                    creditos: 2,
-                    requisitos: ["FS201"],
-                    estado: "Aprobado",
+                    code: 'CNFS1',
+                    name: "Laboratorio de Física I",
+                    credits: 2,
+                    requisites: ["FS201"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IGTM1',
-                    nombre: "Taller y Mantenimiento de Computadoras",
-                    creditos: 1,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'IGTM1',
+                    name: "Taller y Mantenimiento de Computadoras",
+                    credits: 1,
+                    requisites: [],
+                    status: "Aprobado",
                 },                
                 {
-                    codigo: 'CTPT1',
-                    nombre: "Pintura I",
-                    creditos: 1,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'CTPT1',
+                    name: "Pintura I",
+                    credits: 1,
+                    requisites: [],
+                    status: "Aprobado",
                 },                
                 {
-                    codigo: 'CSHD1',
-                    nombre: "Htas. de Diseño y Maquinado ASISA",
-                    creditos: 3,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'CSHD1',
+                    name: "Htas. de Diseño y Maquinado ASISA",
+                    credits: 3,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IDIN1',
-                    nombre: "Inglés (Principiante)",
-                    creditos: 6,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'IDIN1',
+                    name: "Inglés (Principiante)",
+                    credits: 6,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IDIN2',
-                    nombre: "Inglés (Intermedio Bajo)",
-                    creditos: 6,
-                    requisitos: ["IDIN1"],
-                    estado: "Aprobado",
+                    code: 'IDIN2',
+                    name: "Inglés (Intermedio Bajo)",
+                    credits: 6,
+                    requisites: ["IDIN1"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IDIN3',
-                    nombre: "Inglés (Intermedio Alto)",
-                    creditos: 6,
-                    requisitos: ["IDIN2"],
-                    estado: "Aprobado",
+                    code: 'IDIN3',
+                    name: "Inglés (Intermedio Alto)",
+                    credits: 6,
+                    requisites: ["IDIN2"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IDIN4',
-                    nombre: "Inglés (Avanzado)",
-                    creditos: 6,
-                    requisitos: ["IDIN3"],
-                    estado: "Aprobado",
+                    code: 'IDIN4',
+                    name: "Inglés (Avanzado)",
+                    credits: 6,
+                    requisites: ["IDIN3"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IDIN5',
-                    nombre: "Inglés (Vocabulario y Lectura Técnica)",
-                    creditos: 6,
-                    requisitos: ["IDIN4"],
-                    estado: "Aprobado",
+                    code: 'IDIN5',
+                    name: "Inglés (Vocabulario y Lectura Técnica)",
+                    credits: 6,
+                    requisites: ["IDIN4"],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'IDIN6',
-                    nombre: "Inglés (Composición y Conversación)",
-                    creditos: 6,
-                    requisitos: ["IDIN5"],
-                    estado: "Aprobado",
+                    code: 'IDIN6',
+                    name: "Inglés (Composición y Conversación)",
+                    credits: 6,
+                    requisites: ["IDIN5"],
+                    status: "Aprobado",
                 },
             ]
         },
         {
             name: "SEM.",
-            asignaturas: [
+            courses: [
                 {
-                    codigo: 'ESVU1',
-                    nombre: "Seminario de Iniciación a la Vida Universitaria",
-                    creditos: 0,
-                    requisitos: [],
-                    estado: "Aprobado",
+                    code: 'ESVU1',
+                    name: "Seminario de Iniciación a la Vida Universitaria",
+                    credits: 0,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'ESVU2',
-                    nombre: "Seminario de Madurez en la Vida Universitario",
-                    creditos: 1,
-                    requisitos: ["FI501"],
-                    estado: "Aprobado",
+                    code: 'ESPF1',
+                    name: "Retiro de Padres de Familia",
+                    credits: 1,
+                    requisites: [],
+                    status: "Aprobado",
                 },
                 {
-                    codigo: 'ESVU3',
-                    nombre: "Seminario de Preparación a la Vida Profesional",
-                    creditos: 1,
-                    requisitos: ["CR501"],
-                    estado: "Aprobado",
+                    code: 'ESVU2',
+                    name: "Seminario de Madurez en la Vida Universitario",
+                    credits: 1,
+                    requisites: ["FI501"],
+                    status: "Aprobado",
+                },
+                {
+                    code: 'ESVU3',
+                    name: "Seminario de Preparación a la Vida Profesional",
+                    credits: 1,
+                    requisites: ["CR501"],
+                    status: "Aprobado",
+                },
+                {
+                    code: 'FMTS1',
+                    name: "Trabajo Educativo Social",
+                    credits: 2,
+                    requisites: ["CR501"],
+                    status: "Aprobado",
                 },
             ]
         },
     ]
 }
 document.addEventListener("DOMContentLoaded", () => {
-    const planContainer = document.getElementById("planIccContainer");
-    const planEstudioInstance = new PlanDeEstudio(planContainer, planICC);
-    planEstudioInstance.createUX();
+    const programContainer = document.getElementById("programContainer");
+    const studyProgramInstance = new StudyProgram(programContainer, studyProgramICC);
+    studyProgramInstance.createUX();
 });
 
-class PlanDeEstudio {
+class StudyProgram {
     container = null;
     structure = null;
     nodes = null;
-    constructor(container, planStructure) {
+    constructor(container, programStructure) {
         this.container = container;
-        this.structure = planStructure;
+        this.structure = programStructure;
         this.nodes = {};
-        this.container.classList.add("plancontainer");
+        this.container.classList.add("program-container");
         
-        let totalAsignaturas = 0;
-        let aprobadas = 0;
-        let totalSinExtras = 0;
-        let aprobadasSinExtras = 0;
+        let totalCourses = 0;
+        let approved = 0;
+        let totalWithoutExtras = 0;
+        let approvedWithoutExtras = 0;
         
-        this.structure.bloques.forEach(bloque => {
-            bloque.asignaturas.forEach(asignatura => {
-                if (bloque.name !== "XIII") {
-                    totalAsignaturas++;
-                    if (asignatura.estado === "Aprobado") {
-                        aprobadas++;
+        this.structure.blocks.forEach(block => {
+            block.courses.forEach(course => {
+                if (block.name !== "XIII") {
+                    totalCourses++;
+                    if (course.status === "Aprobado") {
+                        approved++;
                     }
                 }
                 
-                if (bloque.name !== "CPG." && bloque.name !== "SEM." && bloque.name !== "XIII") {
-                    totalSinExtras++;
-                    if (asignatura.estado === "Aprobado") {
-                        aprobadasSinExtras++;
+                if (block.name !== "CPG." && block.name !== "SEM." && block.name !== "XIII") {
+                    totalWithoutExtras++;
+                    if (course.status === "Aprobado") {
+                        approvedWithoutExtras++;
                     }
                 }
             });
@@ -642,140 +656,167 @@ class PlanDeEstudio {
         const badgesDiv = document.createElement("div");
         badgesDiv.classList.add("badges-container");
         
-        const badgeAprobadas = document.createElement("span");
-        badgeAprobadas.classList.add("badge", "badge-aprobadas");
-        badgeAprobadas.innerHTML = `<strong>${aprobadas}</strong> Aprobadas`;
+        const badgeApproved = document.createElement("span");
+        badgeApproved.classList.add("badge", "badge-approved");
+        badgeApproved.innerHTML = `<strong>${approved}</strong> Aprobadas`;
         
-        const badgeRestantes = document.createElement("span");
-        badgeRestantes.classList.add("badge", "badge-restantes");
-        badgeRestantes.innerHTML = `<strong>${totalAsignaturas - aprobadas}</strong> Restantes`;
+        const badgeRemaining = document.createElement("span");
+        badgeRemaining.classList.add("badge", "badge-remaining");
+        badgeRemaining.innerHTML = `<strong>${totalCourses - approved}</strong> Restantes`;
         
         const badgeTotal = document.createElement("span");
         badgeTotal.classList.add("badge", "badge-total");
-        badgeTotal.innerHTML = `<strong>${totalAsignaturas}</strong> Total`;
+        badgeTotal.innerHTML = `<strong>${totalCourses}</strong> Total`;
         
-        const badgeCarrera = document.createElement("span");
-        badgeCarrera.classList.add("badge", "badge-carrera");
-        badgeCarrera.innerHTML = `<strong>${aprobadasSinExtras}/${totalSinExtras}</strong> Carrera`;
+        const badgeProgram = document.createElement("span");
+        badgeProgram.classList.add("badge", "badge-program");
+        badgeProgram.innerHTML = `<strong>${approvedWithoutExtras}/${totalWithoutExtras}</strong> Carrera`;
         
-        badgesDiv.appendChild(badgeCarrera);
-        badgesDiv.appendChild(badgeRestantes);
+        badgesDiv.appendChild(badgeProgram);
+        badgesDiv.appendChild(badgeRemaining);
         
         const divider = document.createElement("div");
         divider.classList.add("badge-divider");
         badgesDiv.appendChild(divider);
 
-        badgesDiv.appendChild(badgeAprobadas);
+        badgesDiv.appendChild(badgeApproved);
         badgesDiv.appendChild(badgeTotal);
         
         this.container.appendChild(badgesDiv);
+        
+        const statusIndicadores = document.createElement("div");
+        statusIndicadores.classList.add("status-indicators");
+        
+        const status = [
+            { name: "Aprobado", clase: "aprobado" },
+            { name: "Reprobado", clase: "reprobado" },
+            { name: "Cursando", clase: "cursando" },
+            { name: "Pendiente", clase: "pendiente" }
+        ];
+        
+        status.forEach(stat => {
+            const indicador = document.createElement("div");
+            indicador.classList.add("status-indicator", `status-indicator-${stat.clase}`);
+            
+            const colorBox = document.createElement("div");
+            colorBox.classList.add("status-indicator-color");
+            
+            const label = document.createElement("span");
+            label.textContent = stat.name;
+            
+            indicador.appendChild(colorBox);
+            indicador.appendChild(label);
+            statusIndicadores.appendChild(indicador);
+        });
+        
+        this.container.appendChild(statusIndicadores);
     }
 
     createUX() {
         if (!this.structure) {
             throw Error("Es necesario establecer un plan de estudio JSON.");
         }
-        if (!this.structure.bloques) {
+        if (!this.structure.blocks) {
             throw Error("El plan no tiene bloques.");
         }
-        let bloquesUX = this.structure.bloques.map(
-            (bloque) => {
-                const contendorBloque = document.createElement("div");
-                contendorBloque.classList.add("bloque");
+        let blocksUX = this.structure.blocks.map(
+            (block) => {
+                const blockContainer = document.createElement("div");
+                blockContainer.classList.add("block");
                 
-                const labelBloque = document.createElement("div");
-                labelBloque.classList.add("bloque_label");
+                const blockLabel = document.createElement("div");
+                blockLabel.classList.add("block_label");
                 
-                if (bloque.name === "CPG." || bloque.name === "SEM.") {
-                    labelBloque.classList.add("collapsible");
-                    labelBloque.innerHTML = `<span class="toggle-icon">▼</span> ${bloque.name}`;
+                if (block.name === "CPG." || block.name === "SEM.") {
+                    blockLabel.classList.add("collapsible");
+                    blockLabel.innerHTML = `<span class="toggle-icon">▼</span> ${block.name}`;
                 } else {
-                    labelBloque.innerHTML = bloque.name;
+                    blockLabel.innerHTML = block.name;
                 }
                 
-                const asignaturasBloque = this.createAsignaturasUX(bloque.asignaturas);
+                const coursesBlock = this.createCoursesUX(block.courses);
                 
-                if (bloque.name === "CPG." || bloque.name === "SEM.") {
-                    asignaturasBloque.style.display = "none";
-                    labelBloque.addEventListener("click", (e) => {
-                        const isHidden = asignaturasBloque.style.display === "none";
-                        asignaturasBloque.style.display = isHidden ? "flex" : "none";
-                        labelBloque.classList.toggle("active");
+                if (block.name === "CPG." || block.name === "SEM.") {
+                    coursesBlock.style.display = "none";
+                    blockLabel.addEventListener("click", (e) => {
+                        const isHidden = coursesBlock.style.display === "none";
+                        coursesBlock.style.display = isHidden ? "flex" : "none";
+                        blockLabel.classList.toggle("active");
                     });
                 }
                 
-                contendorBloque.appendChild(labelBloque);
-                contendorBloque.appendChild(asignaturasBloque);
-                return contendorBloque;
+                blockContainer.appendChild(blockLabel);
+                blockContainer.appendChild(coursesBlock);
+                return blockContainer;
             }
         );
-        bloquesUX.forEach(element => {
+        blocksUX.forEach(element => {
             this.container.appendChild(element);
         });
     }
 
-    createAsignaturasUX(asignaturas) {
-        const asignaturasBloque = document.createElement("div");
-        asignaturasBloque.classList.add("bloque_clases");
+    createCoursesUX(courses) {
+        const coursesBlock = document.createElement("div");
+        coursesBlock.classList.add("block_courses");
 
-        asignaturas.forEach(
-            (asignatura) => {
-                const claseUX = document.createElement("div");
-                claseUX.classList.add("bloqueClase");
+        courses.forEach(
+            (course) => {
+                const classUX = document.createElement("div");
+                classUX.classList.add("blockClass");
 
-                switch (asignatura.estado) {
+                switch (course.status) {
                     case "Aprobado":
-                        claseUX.classList.add("estado-aprobado");
+                        classUX.classList.add("status-approved");
                         break;
                     case "Reprobado":
-                        claseUX.classList.add("estado-reprobado");
+                        classUX.classList.add("status-failed");
                         break;
                     case "Pendiente":
-                        claseUX.classList.add("estado-pendiente");
+                        classUX.classList.add("status-pending");
                         break;
                     case "Cursando":
-                        claseUX.classList.add("estado-cursando");
+                        classUX.classList.add("status-taking");
                         break;
                 }
 
                 const codLabel = document.createElement("span");
                 const nameLabel = document.createElement("span");
-                const crdLabel = document.createElement("span");
-                codLabel.innerHTML = asignatura.codigo;
-                nameLabel.innerHTML = asignatura.nombre;
-                crdLabel.innerHTML = asignatura.creditos;
-                if (!this.nodes[asignatura.codigo]) {
-                    this.nodes[asignatura.codigo] = {
-                        node: claseUX,
-                        requisitos: [],
-                        apertura: []
+                const creditLabel = document.createElement("span");
+                codLabel.innerHTML = course.code;
+                nameLabel.innerHTML = course.name;
+                creditLabel.innerHTML = course.credits;
+                if (!this.nodes[course.code]) {
+                    this.nodes[course.code] = {
+                        node: classUX,
+                        requisites: [],
+                        opening: []
                     }
-                    asignatura.requisitos.forEach(r => {
-                        this.nodes[asignatura.codigo].requisitos.push(this.nodes[r].node)
-                        this.nodes[r].apertura.push(this.nodes[asignatura.codigo].node)
+                    course.requisites.forEach(r => {
+                        this.nodes[course.code].requisites.push(this.nodes[r].node)
+                        this.nodes[r].opening.push(this.nodes[course.code].node)
                     }
                     );
                 }
-                const currentNode  = this.nodes[asignatura.codigo];
-                claseUX.addEventListener("mouseover", (e) => {
+                const currentNode  = this.nodes[course.code];
+                classUX.addEventListener("mouseover", (e) => {
                     if (e.target.tagName.toUpperCase() !== 'SPAN') {
-                        currentNode.requisitos.forEach( n => n.classList.add("clase_requisito"));
-                        currentNode.apertura.forEach( n => n.classList.add("clase_apertura"));
+                        currentNode.requisites.forEach( n => n.classList.add("class_requisite"));
+                        currentNode.opening.forEach( n => n.classList.add("class_opening"));
                     }
                 });
-                claseUX.addEventListener("mouseleave", (e) => {
+                classUX.addEventListener("mouseleave", (e) => {
                     if (e.target.tagName.toUpperCase() !== 'SPAN') {
-                        currentNode.requisitos.forEach( n => n.classList.remove("clase_requisito"));
-                        currentNode.apertura.forEach( n => n.classList.remove("clase_apertura"));
+                        currentNode.requisites.forEach( n => n.classList.remove("class_requisite"));
+                        currentNode.opening.forEach( n => n.classList.remove("class_opening"));
                     }
                 });
-                claseUX.appendChild(codLabel);
-                claseUX.appendChild(nameLabel);
-                claseUX.appendChild(crdLabel);
-                asignaturasBloque.appendChild(claseUX);
+                classUX.appendChild(codLabel);
+                classUX.appendChild(nameLabel);
+                classUX.appendChild(creditLabel);
+                coursesBlock.appendChild(classUX);
             }
         );
 
-        return asignaturasBloque;
+        return coursesBlock;
     }
 }

@@ -6,30 +6,63 @@
 body {
     padding: 0px;
     margin: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: #faf8f3;
 }
 
 header {
-    background-color: #002080;
+    width: calc(100% - 2rem);
+    max-width: 1024px;
+    margin: 1rem auto 0;
+    background-color: rgba(0, 32, 128, 0.95);
+    backdrop-filter: blur(15px);
     color: white;
-    padding: 0.3rem;
-    text-align: center;
+    padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 32, 128, 0.15);
+    height: 90px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1024px;
+    padding: 0 1rem;
+}
+
+.header-left {
+    flex-shrink: 0;
+}
+
+.header-center {
+    flex: 1;
+    text-align: left;
+}
+
+.header-center h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.header-center p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0 0 0;
+    opacity: 0.9;
+    font-weight: 300;
 }
 
 .logo {
     height: 60px;
     width: auto;
-    flex-shrink: 0;
-}
-
-.header-text {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    text-align: center;
-    margin-left: -60px;
 }
 
 .badges-container {
@@ -48,6 +81,29 @@ header {
     margin: 0 0.5rem;
 }
 
+.status-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.status-indicator-color {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid #999;
+}
+
 .badge {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -63,32 +119,32 @@ header {
     transform: translateY(-2px);
 }
 
-.badge-aprobadas {
+.badge-approved {
     background-color: #2E8B6F;
     color: white;
     box-shadow: 0 2px 6px rgba(46, 139, 111, 0.3);
 }
 
-.badge-aprobadas:hover {
+.badge-approved:hover {
     box-shadow: 0 4px 12px rgba(46, 139, 111, 0.5);
 }
 
-.badge-aprobadas strong {
+.badge-approved strong {
     font-size: 0.9rem;
     margin-right: 0.3rem;
 }
 
-.badge-restantes {
+.badge-remaining {
     background-color: #5B8FC7;
     color: white;
     box-shadow: 0 2px 6px rgba(91, 143, 199, 0.3);
 }
 
-.badge-restantes:hover {
+.badge-remaining:hover {
     box-shadow: 0 4px 12px rgba(91, 143, 199, 0.5);
 }
 
-.badge-restantes strong {
+.badge-remaining strong {
     font-size: 0.9rem;
     margin-right: 0.3rem;
 }
@@ -108,48 +164,49 @@ header {
     margin-right: 0.3rem;
 }
 
-.badge-carrera {
+.badge-program {
     background-color: #8B6BB1;
     color: white;
     box-shadow: 0 2px 6px rgba(139, 107, 177, 0.3);
 }
 
-.badge-carrera:hover {
+.badge-program:hover {
     box-shadow: 0 4px 12px rgba(139, 107, 177, 0.5);
 }
 
-.badge-carrera strong {
+.badge-program strong {
     font-size: 0.9rem;
     margin-right: 0.3rem;
 }
 
-.plancontainer {
+.program-container {
     margin: 1rem auto;
     max-width: 1024px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding:1rem;
-    background-color: #fafafa;
+    background-color: #fffcf8;
     border-radius: 13px;
+    box-shadow: 0 4px 16px rgba(0, 32, 128, 0.08);
 }
 
-.plancontainer h3 {
+.program-container h3 {
     text-align: center;
     margin-bottom: 0.5rem;
 }
 
-.plancontainer .bloque {
+.program-container .block {
     border: 1px solid #d4d4d4;
     display: flex;
     flex-direction: row;
     gap: 1rem;
     align-items: center;
     border-radius: 5px;
-    background: linear-gradient(to right, #eceff1, #ffffff);
+    background: linear-gradient(to right, #eceff1, #fffefc);
 }
 
-.plancontainer .bloque .bloque_label {
+.program-container .block .block_label {
     padding: 1rem;
     width: 3.5rem;
     font-size: 1.5rem;
@@ -157,37 +214,37 @@ header {
     text-align: center;
 }
 
-.plancontainer .bloque .bloque_label.collapsible {
+.program-container .block .block_label.collapsible {
     width: auto;
     cursor: pointer;
     user-select: none;
     transition: background-color 0.3s ease;
 }
 
-.plancontainer .bloque .bloque_label.collapsible:hover {
+.program-container .block .block_label.collapsible:hover {
     background-color: rgba(0, 32, 128, 0.1);
     border-radius: 5px;
 }
 
-.plancontainer .bloque .bloque_label.collapsible .toggle-icon {
+.program-container .block .block_label.collapsible .toggle-icon {
     display: inline-block;
     margin-right: 0.5rem;
     transition: transform 0.3s ease;
     font-size: 0.7rem;
 }
 
-.plancontainer .bloque .bloque_label.collapsible.active .toggle-icon {
+.program-container .block .block_label.collapsible.active .toggle-icon {
     transform: rotate(180deg);
 }
 
-.plancontainer .bloque .bloque_clases {
+.program-container .block .block_courses {
     display: flex;
     flex:2;
     flex-wrap: wrap;
     gap: 0.75rem;
     padding: 0.5rem;
 }
-.plancontainer .bloque .bloque_clases .bloqueClase {
+.program-container .block .block_courses .blockClass {
     display: flex;
     align-items: start;
     justify-content: center;
@@ -202,124 +259,181 @@ header {
     width: 10rem;
     cursor: default;
     background-color: #ffffff;
-    color: #1a1a1a;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
-.plancontainer .bloque .bloque_clases .bloqueClase span:nth-child(1) {
+.program-container .block .block_courses .blockClass span:nth-child(1) {
     color: #444;
 }
 
-.plancontainer .bloque .bloque_clases .bloqueClase span:nth-child(2) {
+.program-container .block .block_courses .blockClass span:nth-child(2) {
     font-weight: bold;
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
 }
 
-.plancontainer .bloque .bloque_clases .bloqueClase::before {
+.program-container .block .block_courses .blockClass::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 0.45rem;
-    background-color: var(--estado-color, transparent);
+    background-color: var(--status-color, transparent);
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
 }
 
-.plancontainer .bloque .bloque_clases .bloqueClase:hover {
+.program-container .block .block_courses .blockClass:hover {
     background-color: rgba(254, 255, 212, 0.9);
     transform: translateY(-3px);
 }
 
-.plancontainer .bloque .bloque_clases .bloqueClase.clase_requisito{
+.program-container .block .block_courses .blockClass.class_requisite{
     background-color: rgba(183, 248, 255, 0.9);
 }
 
-.plancontainer .bloque .bloque_clases .bloqueClase.clase_apertura{
+.program-container .block .block_courses .blockClass.class_opening{
     background-color: rgba(255, 190, 253, 0.9);
 }
 
-.plancontainer .bloque .bloque_clases .bloqueClase span:nth-child(3) {
+.program-container .block .block_courses .blockClass span:nth-child(3) {
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
 }
 
-.estado-aprobado { 
-    --estado-color: #28a745;
+.status-approved { 
+    --status-color: #28a745;
     box-shadow: 0 2px 6px rgba(40, 167, 69, 0.3);
 }
 
-.estado-aprobado:hover {
+.status-approved:hover {
     box-shadow: 0 4px 12px rgba(40, 167, 69, 0.5);
 }
 
-.estado-reprobado { 
-    --estado-color: #dc3545;
+.status-indicator-aprobado .status-indicator-color {
+    background-color: #28a745;
+    border-color: #1e7e34;
+}
+
+.status-failed { 
+    --status-color: #dc3545;
     box-shadow: 0 2px 6px rgba(220, 53, 69, 0.3);
 }
 
-.estado-reprobado:hover {
+.status-failed:hover {
     box-shadow: 0 4px 12px rgba(220, 53, 69, 0.5);
 }
 
-.estado-pendiente { 
-    --estado-color: #9ea3a7;
+.status-indicator-reprobado .status-indicator-color {
+    background-color: #dc3545;
+    border-color: #bb2d3b;
+}
+
+.status-pending { 
+    --status-color: #9ea3a7;
     box-shadow: 0 2px 6px rgba(158, 163, 167, 0.3);
+    color: #999;
 }
 
-.estado-pendiente:hover {
+.status-pending:hover {
     box-shadow: 0 4px 12px rgba(158, 163, 167, 0.5);
+    color: #000;
 }
 
-.estado-cursando { 
-    --estado-color: #ffc107;
+.status-indicator-pendiente .status-indicator-color {
+    background-color: #9ea3a7;
+    border-color: #6c7073;
+}
+
+.status-taking { 
+    --status-color: #ffc107;
     box-shadow: 0 2px 6px rgba(255, 193, 7, 0.3);
 }
 
-.estado-cursando:hover {
+.status-taking:hover {
     box-shadow: 0 4px 12px rgba(255, 193, 7, 0.5);
+}
+
+.status-indicator-cursando .status-indicator-color {
+    background-color: #ffc107;
+    border-color: #ff9800;
 }
 
 footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #002080;
+    width: calc(100% - 2rem);
+    max-width: 1024px;
+    margin: 2rem auto;
+    background-color: rgba(15, 15, 15, 0.9);
+    backdrop-filter: blur(15px);
     color: white;
-    padding: 0.5rem;
+    padding: 0.75rem 1rem;
     text-align: center;
-    margin-top: 2rem;
     font-size: 0.7rem;
-    height: 60px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(15, 15, 15, 0.2);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
 
 @media (max-width: 768px) {
-    .plancontainer {
+    header {
+        height: auto;
+        padding: 0.75rem;
+    }
+
+    .header-container {
+        gap: 1rem;
+    }
+
+    .header-center h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-center p {
+        font-size: 0.8rem;
+    }
+
+    .logo {
+        height: 45px;
+    }
+
+    .program-container {
         padding: 0.5rem;
         margin: 0.5rem;
     }
 
-    .plancontainer .bloque {
+    .program-container .block {
         flex-direction: column;
         gap: 0.5rem;
     }
 
-    .plancontainer .bloque .bloque_label {
+    .program-container .block .block_label {
         width: 100%;
         padding: 0.5rem;
         font-size: 1.2rem;
     }
 
-    .plancontainer .bloque .bloque_clases {
+    .program-container .block .block_courses {
         width: 100%;
         justify-content: center;
     }
 
-    .plancontainer .bloque .bloque_clases .bloqueClase {
+    .program-container .block .block_courses .blockClass {
         width: calc(50% - 0.375rem);
         min-width: 8rem;
     }
@@ -327,46 +441,54 @@ footer {
 
 @media (max-width: 480px) {
     header {
-        padding: 0.5rem;
-        font-size: 0.9rem;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        height: auto;
+    }
+
+    .header-container {
+        flex-direction: column;
         gap: 0.5rem;
+        text-align: center;
+    }
+
+    .header-left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .header-center {
+        text-align: center;
+    }
+
+    .header-center h1 {
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+    }
+
+    .header-center p {
+        font-size: 0.75rem;
     }
 
     .logo {
-        height: 50px;
+        height: 40px;
         width: auto;
-        flex-shrink: 0;
     }
 
-    .header-text {
-        flex: 0 1 auto;
-        text-align: center;
-        margin-left: 0;
+    .status-indicators {
+        gap: 0.5rem;
     }
 
-    .header-text h3 {
-        font-size: 1rem;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        max-width: 90%;
-    }
-
-    .plancontainer h3 {
+    .program-container h3 {
         font-size: 1.2rem;
     }
 
-    .plancontainer .bloque .bloque_clases .bloqueClase {
+    .program-container .block .block_courses .blockClass {
         width: 80%;
         min-width: unset;
         align-items: center;
         text-align: center;
     }
 
-    .plancontainer .bloque .bloque_clases {
+    .program-container .block .block_courses {
         gap: 0.5rem;
     }
 
