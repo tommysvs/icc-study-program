@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plan de estudio ICC</title>
     <link rel="icon" href="assets/img/logo-unicah.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css" />
     <script src="js/study_program.js"></script>
 </head>
@@ -21,40 +22,43 @@
         </div>
     </header>
     <main>
-        <aside class="profile-sidebar">
-            <div class="profile-card">
-                <div class="profile-avatar">
-                    <img src="assets/img/pp.bmp" alt="Tommy Vega Profile Picture">
-                </div>
-                <h2 class="profile-name">Tommy Vega</h2>
-                <p class="profile-title">Estudiante</p>
-
-                <div class="profile-progress">
-                    <div class="progress-label">
-                        <span>Progreso</span>
-                        <span id="profilePercentage">0%</span>
+        <div class="sidebar-wrapper">
+            <aside class="profile-sidebar">
+                <div class="profile-card">
+                    <div class="profile-avatar">
+                        <img src="assets/img/pp.bmp" alt="Tommy Vega Profile Picture">
                     </div>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="profileProgressFill" style="width: 0%"></div>
+                    <h2 class="profile-name">Tommy Vega</h2>
+                    <p class="profile-title">Estudiante</p>
+
+                    <div class="profile-progress">
+                        <div class="progress-label">
+                            <span>Progreso</span>
+                            <span id="profilePercentage">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="profileProgressFill" style="width: 0%"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="profile-badges">
-                <div class="badge badge-program">
-                    <strong id="badgeProgramCount">0/0</strong>Carrera
+                <div class="profile-badges">
+                    <div class="badge badge-program">
+                        <strong id="badgeProgramCount">0/0</strong>Carrera
+                    </div>
+                    <div class="badge badge-remaining">
+                        <strong id="badgeRemainingCount">0</strong>Restantes
+                    </div>
+                    <div class="badge badge-approved">
+                        <strong id="badgeApprovedCount">0</strong>Aprobadas
+                    </div>
+                    <div class="badge badge-total">
+                        <strong id="badgeTotalCount">0</strong>Total
+                    </div>
                 </div>
-                <div class="badge badge-remaining">
-                    <strong id="badgeRemainingCount">0</strong>Restantes
-                </div>
-                <div class="badge badge-approved">
-                    <strong id="badgeApprovedCount">0</strong>Aprobadas
-                </div>
-                <div class="badge badge-total">
-                    <strong id="badgeTotalCount">0</strong>Total
-                </div>
-            </div>
-        </aside>
+            </aside>
+        </div>
+        
         <section id="programContainer"></section>
     </main>
     <footer>
@@ -63,5 +67,13 @@
             <p style="font-size: 0.65rem; margin: 0.25rem 0 0 0;">El logo de UNICAH es propiedad de la Universidad Católica de Honduras.</p>
         </div>
     </footer>
+    
+    <label class="dark-mode-switch">
+        <input type="checkbox" id="darkModeToggle" onclick="toggleDarkMode()">
+        <span class="slider">
+            <i class="fas fa-sun icon sun"></i>
+            <i class="fas fa-moon icon moon"></i>
+        </span>
+    </label>
 </body>
 </html>
