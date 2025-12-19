@@ -95,8 +95,6 @@ header {
     height: 90px;
 }
 
-
-
 .header-container {
     display: flex;
     align-items: center;
@@ -160,6 +158,18 @@ header {
     height: 8px;
     border-radius: 50%;
     border: 1px solid #999;
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: scale(0.9);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.85;
+    }
 }
 
 main {
@@ -503,6 +513,7 @@ main {
 .status-indicator-aprobado .status-indicator-color {
     background-color: #28a745;
     border-color: #1e7e34;
+    box-shadow: 0 0 3px rgba(40, 167, 69, 0.4), 0 0 6px rgba(40, 167, 69, 0.2);
 }
 
 .status-failed { 
@@ -517,6 +528,7 @@ main {
 .status-indicator-reprobado .status-indicator-color {
     background-color: #dc3545;
     border-color: #bb2d3b;
+    box-shadow: 0 0 3px rgba(220, 53, 69, 0.4), 0 0 6px rgba(220, 53, 69, 0.2);
 }
 
 .status-pending { 
@@ -533,6 +545,7 @@ main {
 .status-indicator-pendiente .status-indicator-color {
     background-color: #9ea3a7;
     border-color: #6c7073;
+    box-shadow: 0 0 3px rgba(158, 163, 167, 0.3), 0 0 6px rgba(158, 163, 167, 0.15);
 }
 
 .status-taking { 
@@ -547,6 +560,7 @@ main {
 .status-indicator-cursando .status-indicator-color {
     background-color: #ffc107;
     border-color: #ff9800;
+    box-shadow: 0 0 3px rgba(255, 193, 7, 0.4), 0 0 6px rgba(255, 193, 7, 0.2);
 }
 
 footer {
@@ -836,10 +850,5 @@ footer a:hover {
 
     .program-container .block:nth-child(15) .block_courses .blockClass {
         width: 70%;
-    }
-
-    .dark-mode-switch {
-        bottom: 2rem;
-        left: 1rem;
     }
 }
