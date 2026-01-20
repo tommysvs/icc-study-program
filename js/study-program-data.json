@@ -9,35 +9,64 @@
                     "name": "Español",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 70,
+                    "period": "I",
+                    "year": 2015
                 },
                 {
                     "code": "MT101",
                     "name": "Matemáticas",
                     "credits": 4,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 70,
+                    "period": "I",
+                    "year": 2015
                 },
                 {
                     "code": "IF112",
                     "name": "Introducción a las Ciencias de la Computación",
                     "credits": 4,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 93,
+                    "period": "I",
+                    "year": 2015
                 },
                 {
                     "code": "SC101",
                     "name": "Sociología",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 76,
+                    "period": "I",
+                    "year": 2015
                 },
                 {
                     "code": "FI101",
                     "name": "Filosofía",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 81,
+                    "period": "II",
+                    "year": 2015,
+                    "gradeHistory": [
+                        {
+                            "grade": 81,
+                            "year": 2015,
+                            "period": "II",
+                            "status": "Aprobado"
+                        },
+                        {
+                            "grade": 55,
+                            "year": 2015,
+                            "period": "I",
+                            "status": "Reprobado"
+                        }
+                    ]
                 }
             ]
         },
@@ -48,36 +77,73 @@
                     "code": "ES201",
                     "name": "Expresión Oral y Escrita",
                     "credits": 3,
-                    "requisites": ["ES101"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "ES101"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 73,
+                    "year": 2015,
+                    "period": "II"
                 },
                 {
                     "code": "MT201",
                     "name": "Precálculo",
                     "credits": 4,
-                    "requisites": ["MT101"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "MT101"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 75,
+                    "year": 2015,
+                    "period": "III",
+                    "gradeHistory": [
+                        {
+                            "grade": 75,
+                            "year": 2015,
+                            "period": "III",
+                            "status": "Aprobado"
+                        },
+                        {
+                            "grade": 50,
+                            "year": 2015,
+                            "period": "II",
+                            "status": "Reprobado"
+                        }
+                    ]
                 },
                 {
                     "code": "IF200",
                     "name": "Fundamentos y Lógica de Programación",
                     "credits": 4,
-                    "requisites": ["IF112"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF112"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 70,
+                    "year": 2015,
+                    "period": "II"
                 },
                 {
                     "code": "HS101",
                     "name": "Historia de Honduras",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 70,
+                    "year": 2022,
+                    "period": "I"
                 },
                 {
                     "code": "CR201",
                     "name": "El Hombre Frente a la Vida",
                     "credits": 3,
-                    "requisites": ["FI101"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "FI101"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 73,
+                    "year": 2022,
+                    "period": "I"
                 }
             ]
         },
@@ -88,36 +154,101 @@
                     "code": "MT202",
                     "name": "Estadística I",
                     "credits": 4,
-                    "requisites": ["MT101"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "MT101"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 92,
+                    "year": 2022,
+                    "period": "III",
+                    "gradeHistory": [
+                        {
+                            "grade": 92,
+                            "year": 2022,
+                            "period": "III",
+                            "status": "Aprobado"
+                        },
+                        {
+                            "grade": 43,
+                            "year": 2015,
+                            "period": "III",
+                            "status": "Reprobado"
+                        }
+                    ]
                 },
                 {
                     "code": "MT303",
                     "name": "Cálculo I",
                     "credits": 4,
-                    "requisites": ["MT201"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "MT201"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 70,
+                    "year": 2016,
+                    "period": "II",
+                    "gradeHistory": [
+                        {
+                            "grade": 70,
+                            "year": 2016,
+                            "period": "II",
+                            "status": "Aprobado"
+                        },
+                        {
+                            "grade": 59,
+                            "year": 2016,
+                            "period": "I",
+                            "status": "Reprobado"
+                        }
+                    ]
                 },
                 {
                     "code": "IF214",
                     "name": "Programación Estructurada I",
                     "credits": 3,
-                    "requisites": ["IF200"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF200"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 77,
+                    "year": 2015,
+                    "period": "III"
                 },
                 {
                     "code": "IF213",
                     "name": "Estructuras Discretas",
                     "credits": 3,
-                    "requisites": ["IF200"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF200"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 82,
+                    "year": 2024,
+                    "period": "III",
+                    "gradeHistory": [
+                        {
+                            "grade": 82,
+                            "year": 2024,
+                            "period": "III",
+                            "status": "Aprobado"
+                        },
+                        {
+                            "grade": 65,
+                            "year": 2015,
+                            "period": "II",
+                            "status": "Reprobado"
+                        }
+                    ]
                 },
                 {
                     "code": "IF394",
                     "name": "Diseño Gráfico",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 90,
+                    "year": 2022,
+                    "period": "I"
                 }
             ]
         },
@@ -128,36 +259,56 @@
                     "code": "AD302",
                     "name": "Métodos y Técnicas de Investigación",
                     "credits": 3,
-                    "requisites": ["MT202"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "MT202"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 88,
+                    "year": 2024,
+                    "period": "III"
                 },
                 {
                     "code": "MT401",
                     "name": "Cálculo II",
                     "credits": 4,
-                    "requisites": ["MT303"],
+                    "requisites": [
+                        "MT303"
+                    ],
                     "status": "Pendiente"
                 },
                 {
                     "code": "IF301",
                     "name": "Programación Estructurada II",
                     "credits": 3,
-                    "requisites": ["IF214"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF214"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 78,
+                    "year": 2024,
+                    "period": "III"
                 },
                 {
                     "code": "FS201",
                     "name": "Física I",
                     "credits": 3,
-                    "requisites": ["MT101"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "MT101"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 71,
+                    "year": 2016,
+                    "period": "I"
                 },
                 {
                     "code": "EL101",
                     "name": "Administración",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 80,
+                    "year": 2022,
+                    "period": "I"
                 }
             ]
         },
@@ -169,35 +320,102 @@
                     "name": "Base de Datos I",
                     "credits": 34,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 86,
+                    "year": 2016,
+                    "period": "II"
                 },
                 {
                     "code": "CT201",
                     "name": "Contabilidad",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Reprobado"
+                    "status": "Reprobado",
+                    "grade": 34,
+                    "year": 2015,
+                    "period": "III",
+                    "gradeHistory": [
+                        {
+                            "grade": 34,
+                            "year": 2015,
+                            "period": "III",
+                            "status": "Reprobado"
+                        }
+                    ]
                 },
                 {
                     "code": "IF325",
                     "name": "Programación en Entornos de Desarrollo Visual",
                     "credits": 3,
-                    "requisites": ["IF301"],
-                    "status": "Cursando"
+                    "requisites": [
+                        "IF301"
+                    ],
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "I",
+                    "gradeHistory": [
+                        {
+                            "year": 2026,
+                            "period": "I",
+                            "status": "Cursando"
+                        },
+                        {
+                            "grade": 33,
+                            "year": 2024,
+                            "period": "III",
+                            "status": "Aprobado"
+                        },
+                        {
+                            "grade": 46,
+                            "year": 2023,
+                            "period": "II",
+                            "status": "Reprobado"
+                        },
+                        {
+                            "grade": 36,
+                            "year": 2022,
+                            "period": "III",
+                            "status": "Reprobado"
+                        }
+                    ]
                 },
                 {
                     "code": "IF319",
                     "name": "Principios de Electrónica",
                     "credits": 3,
-                    "requisites": ["FS201"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "FS201"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 76,
+                    "year": 2022,
+                    "period": "II",
+                    "gradeHistory": [
+                        {
+                            "grade": 76,
+                            "year": 2022,
+                            "period": "II",
+                            "status": "Aprobado"
+                        },
+                        {
+                            "grade": 0,
+                            "year": 2022,
+                            "period": "I",
+                            "status": "Reprobado"
+                        }
+                    ]
                 },
                 {
                     "code": "MT204",
                     "name": "Matemática Financiera",
                     "credits": 3,
-                    "requisites": ["MT101"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "MT101"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 77,
+                    "year": 2016,
+                    "period": "II"
                 }
             ]
         },
@@ -208,22 +426,47 @@
                     "code": "IF327",
                     "name": "Base de Datos II",
                     "credits": 3,
-                    "requisites": ["IF322"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF322"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 86,
+                    "year": 2022,
+                    "period": "I"
                 },
                 {
                     "code": "IF212",
                     "name": "Análisis y Diseño de Sistemas",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 85,
+                    "year": 2022,
+                    "period": "II"
                 },
                 {
                     "code": "IF323",
                     "name": "Redes I",
                     "credits": 4,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 84,
+                    "year": 2023,
+                    "period": "II",
+                    "gradeHistory": [
+                        {
+                            "grade": 84,
+                            "year": 2023,
+                            "period": "II",
+                            "status": "Aprobado"
+                        },
+                        {
+                            "grade": 53,
+                            "year": 2022,
+                            "period": "III",
+                            "status": "Reprobado"
+                        }
+                    ]
                 },
                 {
                     "code": "IF324",
@@ -236,8 +479,13 @@
                     "code": "FI501",
                     "name": "Ética Profesional",
                     "credits": 3,
-                    "requisites": ["CR201"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "CR201"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 88,
+                    "year": 2022,
+                    "period": "II"
                 }
             ]
         },
@@ -248,35 +496,66 @@
                     "code": "IF342",
                     "name": "Base de Datos Multidimensional",
                     "credits": 3,
-                    "requisites": ["IF327"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF327"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 95,
+                    "year": 2025,
+                    "period": "II",
+                    "gradeHistory": [
+                        {
+                            "grade": 95,
+                            "year": 2025,
+                            "period": "II",
+                            "status": "Aprobado"
+                        },
+                        {
+                            "grade": 32,
+                            "year": 2022,
+                            "period": "III",
+                            "status": "Reprobado"
+                        }
+                    ]
                 },
                 {
                     "code": "IF340",
                     "name": "Programación Multiplataforma",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 92,
+                    "year": 2025,
+                    "period": "I"
                 },
                 {
                     "code": "IF314",
                     "name": "Desarrollo de Software",
                     "credits": 4,
-                    "requisites": ["IF212"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF212"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 82,
+                    "year": 2025,
+                    "period": "II"
                 },
                 {
                     "code": "IF328",
                     "name": "Redes II",
                     "credits": 3,
-                    "requisites": ["IF323"],
+                    "requisites": [
+                        "IF323"
+                    ],
                     "status": "Pendiente"
                 },
                 {
                     "code": "IF329",
                     "name": "Sistemas Automatizados",
                     "credits": 3,
-                    "requisites": ["IF324"],
+                    "requisites": [
+                        "IF324"
+                    ],
                     "status": "Pendiente"
                 }
             ]
@@ -288,29 +567,45 @@
                     "code": "IF391",
                     "name": "Sistemas Ingeligentes para Negocios",
                     "credits": 3,
-                    "requisites": ["IF342"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF342"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 83,
+                    "year": 2025,
+                    "period": "III"
                 },
                 {
                     "code": "BG205",
                     "name": "Ecología",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 70,
+                    "year": 2022,
+                    "period": "I"
                 },
                 {
                     "code": "IF346",
                     "name": "Implementación de Sistemas de Software",
                     "credits": 3,
-                    "requisites": ["IF314"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF314"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 88,
+                    "year": 2025,
+                    "period": "III"
                 },
                 {
                     "code": "IF345",
                     "name": "Sistemas Operativos I",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 88,
+                    "year": 2025,
+                    "period": "I"
                 },
                 {
                     "code": "IF370",
@@ -328,8 +623,13 @@
                     "code": "IF353",
                     "name": "Desarrollo de Portales Web I",
                     "credits": 3,
-                    "requisites": ["IF340"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF340"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 83,
+                    "year": 2025,
+                    "period": "III"
                 },
                 {
                     "code": "IF351",
@@ -343,20 +643,30 @@
                     "name": "Gestión de la Calidad Total",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 89,
+                    "year": 2025,
+                    "period": "II"
                 },
                 {
                     "code": "IF352",
                     "name": "Sistemas Operativos II",
                     "credits": 3,
-                    "requisites": ["IF345"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IF345"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 87,
+                    "year": 2025,
+                    "period": "III"
                 },
                 {
                     "code": "IF381",
                     "name": "Seminario de Hardware y Electricidad",
                     "credits": 3,
-                    "requisites": ["IF370"],
+                    "requisites": [
+                        "IF370"
+                    ],
                     "status": "Pendiente"
                 }
             ]
@@ -368,36 +678,53 @@
                     "code": "IF357",
                     "name": "Desarrollo de Portales Web II",
                     "credits": 3,
-                    "requisites": ["IF353"],
-                    "status": "Cursando"
+                    "requisites": [
+                        "IF353"
+                    ],
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "I"
                 },
                 {
                     "code": "IF355",
                     "name": "Programación Móvil II",
                     "credits": 3,
-                    "requisites": ["IF351"],
+                    "requisites": [
+                        "IF351"
+                    ],
                     "status": "Pendiente"
                 },
                 {
                     "code": "MT304",
                     "name": "Control Estadístico de la Calidad",
                     "credits": 3,
-                    "requisites": ["AD104"],
-                    "status": "Cursando"
+                    "requisites": [
+                        "AD104"
+                    ],
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "I"
                 },
                 {
                     "code": "IF356",
                     "name": "Gestión y Estándares de Tecnología de Información",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Cursando"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "I"
                 },
                 {
                     "code": "CR501",
                     "name": "Doctrina Social de la Iglesia",
                     "credits": 3,
-                    "requisites": ["FI501"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "FI501"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 75,
+                    "year": 2025,
+                    "period": "I"
                 }
             ]
         },
@@ -408,7 +735,9 @@
                     "code": "IF362",
                     "name": "Negocios Web",
                     "credits": 3,
-                    "requisites": ["IF357"],
+                    "requisites": [
+                        "IF357"
+                    ],
                     "status": "Pendiente"
                 },
                 {
@@ -422,21 +751,27 @@
                     "code": "AD402",
                     "name": "Planeación y Diseño de un Modelo de Calidad",
                     "credits": 3,
-                    "requisites": ["MT304"],
+                    "requisites": [
+                        "MT304"
+                    ],
                     "status": "Pendiente"
                 },
                 {
                     "code": "IF360",
                     "name": "Seguridad Informática y Gestión del Riesgo",
                     "credits": 3,
-                    "requisites": ["IF356"],
+                    "requisites": [
+                        "IF356"
+                    ],
                     "status": "Pendiente"
                 },
                 {
                     "code": "IF358",
                     "name": "Administración de Centros de Cómputo",
                     "credits": 3,
-                    "requisites": ["IF356"],
+                    "requisites": [
+                        "IF356"
+                    ],
                     "status": "Pendiente"
                 }
             ]
@@ -448,28 +783,36 @@
                     "code": "IF361",
                     "name": "Seminario Taller de Software",
                     "credits": 3,
-                    "requisites": ["IF362"],
+                    "requisites": [
+                        "IF362"
+                    ],
                     "status": "Pendiente"
                 },
                 {
                     "code": "IF392",
                     "name": "Gestión de Proyectos Informáticos",
                     "credits": 3,
-                    "requisites": ["IF347"],
+                    "requisites": [
+                        "IF347"
+                    ],
                     "status": "Pendiente"
                 },
                 {
                     "code": "IF350",
                     "name": "Big Data",
                     "credits": 3,
-                    "requisites": ["IF391"],
+                    "requisites": [
+                        "IF391"
+                    ],
                     "status": "Pendiente"
                 },
                 {
                     "code": "IF380",
                     "name": "Auditoría de Sistemas de Información",
                     "credits": 3,
-                    "requisites": ["IF360"],
+                    "requisites": [
+                        "IF360"
+                    ],
                     "status": "Pendiente"
                 },
                 {
@@ -477,7 +820,9 @@
                     "name": "Excel Avanzado para Ingenierías",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Cursando"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "I"
                 }
             ]
         },
@@ -500,71 +845,113 @@
                     "code": "CNFS1",
                     "name": "Laboratorio de Física I",
                     "credits": 2,
-                    "requisites": ["FS201"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "FS201"
+                    ],
+                    "status": "Aprobado",
+                    "grade": 95,
+                    "year": 2025,
+                    "period": "III"
                 },
                 {
                     "code": "IGTM1",
                     "name": "Taller y Mantenimiento de Computadoras",
                     "credits": 1,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 100,
+                    "year": 2015,
+                    "period": "II"
                 },
                 {
                     "code": "CTPT1",
                     "name": "Pintura I",
                     "credits": 1,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 93,
+                    "year": 2016,
+                    "period": "I"
                 },
                 {
                     "code": "CSHD1",
                     "name": "Htas. de Diseño y Maquinado ASISA",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "grade": 95,
+                    "year": 2016,
+                    "period": "II"
                 },
                 {
                     "code": "IDIN1",
                     "name": "Inglés (Principiante)",
                     "credits": 6,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Suficiencia",
+                    "grade": 100,
+                    "year": 2022,
+                    "period": "I"
                 },
                 {
                     "code": "IDIN2",
                     "name": "Inglés (Intermedio Bajo)",
                     "credits": 6,
-                    "requisites": ["IDIN1"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IDIN1"
+                    ],
+                    "status": "Suficiencia",
+                    "grade": 100,
+                    "year": 2022,
+                    "period": "I"
                 },
                 {
                     "code": "IDIN3",
                     "name": "Inglés (Intermedio Alto)",
                     "credits": 6,
-                    "requisites": ["IDIN2"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IDIN2"
+                    ],
+                    "status": "Suficiencia",
+                    "grade": 100,
+                    "year": 2022,
+                    "period": "I"
                 },
                 {
                     "code": "IDIN4",
                     "name": "Inglés (Avanzado)",
                     "credits": 6,
-                    "requisites": ["IDIN3"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IDIN3"
+                    ],
+                    "status": "Suficiencia",
+                    "grade": 100,
+                    "year": 2022,
+                    "period": "I"
                 },
                 {
                     "code": "IDIN5",
                     "name": "Inglés (Vocabulario y Lectura Técnica)",
                     "credits": 6,
-                    "requisites": ["IDIN4"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IDIN4"
+                    ],
+                    "status": "Suficiencia",
+                    "grade": 100,
+                    "year": 2022,
+                    "period": "I"
                 },
                 {
                     "code": "IDIN6",
                     "name": "Inglés (Composición y Conversación)",
                     "credits": 6,
-                    "requisites": ["IDIN5"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "IDIN5"
+                    ],
+                    "status": "Suficiencia",
+                    "grade": 100,
+                    "year": 2022,
+                    "period": "I"
                 }
             ]
         },
@@ -576,34 +963,48 @@
                     "name": "Seminario de Iniciación a la Vida Universitaria",
                     "credits": 0,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "year": 2015,
+                    "period": "I"
                 },
                 {
                     "code": "ESPF1",
                     "name": "Retiro de Padres de Familia",
                     "credits": 1,
                     "requisites": [],
-                    "status": "Aprobado"
+                    "status": "Aprobado",
+                    "year": 2022,
+                    "period": "I"
                 },
                 {
                     "code": "ESVU2",
                     "name": "Seminario de Madurez en la Vida Universitario",
                     "credits": 1,
-                    "requisites": ["FI501"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "FI501"
+                    ],
+                    "status": "Aprobado",
+                    "year": 2022,
+                    "period": "II"
                 },
                 {
                     "code": "ESVU3",
                     "name": "Seminario de Preparación a la Vida Profesional",
                     "credits": 1,
-                    "requisites": ["CR501"],
-                    "status": "Aprobado"
+                    "requisites": [
+                        "CR501"
+                    ],
+                    "status": "Aprobado",
+                    "year": 2025,
+                    "period": "I"
                 },
                 {
                     "code": "FMTS1",
                     "name": "Trabajo Educativo Social",
                     "credits": 2,
-                    "requisites": ["CR501"],
+                    "requisites": [
+                        "CR501"
+                    ],
                     "status": "Pendiente"
                 }
             ]

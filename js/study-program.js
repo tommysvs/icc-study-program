@@ -37,14 +37,14 @@ class StudyProgram {
             block.courses.forEach(course => {
                 if (block.name !== "XIII" && block.name !== "SEM.") {
                     totalCourses++;
-                    if (course.status === "Aprobado") {
+                    if (course.status === "Aprobado" || course.status === "Suficiencia") {
                         approved++;
                     }
                 }
                 
                 if (block.name !== "CPG." && block.name !== "SEM." && block.name !== "XIII") {
                     totalWithoutExtras++;
-                    if (course.status === "Aprobado") {
+                    if (course.status === "Aprobado" || course.status === "Suficiencia") {
                         approvedWithoutExtras++;
                     }
                 }
@@ -63,6 +63,8 @@ class StudyProgram {
         const percentage = Math.round((approvedWithoutExtras / totalWithoutExtras) * 100);
         document.getElementById("profilePercentage").textContent = `${percentage}%`;
         document.getElementById("profileProgressFill").style.width = `${percentage}%`;
+        
+        this.calculateAndDisplayGPAs();
         
         const statusIndicadores = document.createElement("div");
         statusIndicadores.classList.add("status-indicators");
@@ -146,6 +148,7 @@ class StudyProgram {
 
                 switch (course.status) {
                     case "Aprobado":
+                    case "Suficiencia":
                         classUX.classList.add("status-approved");
                         break;
                     case "Reprobado":
@@ -164,7 +167,38 @@ class StudyProgram {
                 const creditLabel = document.createElement("span");
                 codLabel.innerHTML = course.code;
                 nameLabel.innerHTML = course.name;
+                nameLabel.classList.add("course-name");
                 creditLabel.innerHTML = course.credits;
+                
+                const headerContainer = document.createElement("div");
+                headerContainer.classList.add("course-header");
+                headerContainer.appendChild(codLabel);
+                headerContainer.appendChild(creditLabel);
+                
+                classUX.appendChild(headerContainer);
+                classUX.appendChild(nameLabel);
+                
+                if (course.grade !== undefined || course.year) {
+                    const infoContainer = document.createElement("div");
+                    infoContainer.classList.add("course-info-container");
+                    
+                    if (course.grade !== undefined) {
+                        const gradeLabel = document.createElement("div");
+                        gradeLabel.classList.add("course-grade");
+                        gradeLabel.innerHTML = `${course.grade}%`;
+                        infoContainer.appendChild(gradeLabel);
+                    }
+                    
+                    if (course.year) {
+                        const yearLabel = document.createElement("div");
+                        yearLabel.classList.add("course-year");
+                        yearLabel.innerHTML = course.year;
+                        infoContainer.appendChild(yearLabel);
+                    }
+                    
+                    classUX.appendChild(infoContainer);
+                }
+                
                 if (!this.nodes[course.code]) {
                     this.nodes[course.code] = {
                         node: classUX,
@@ -190,14 +224,63 @@ class StudyProgram {
                         currentNode.opening.forEach( n => n.classList.remove("class_opening"));
                     }
                 });
-                classUX.appendChild(codLabel);
-                classUX.appendChild(nameLabel);
-                classUX.appendChild(creditLabel);
                 coursesBlock.appendChild(classUX);
             }
         );
 
         return coursesBlock;
+    }
+
+    calculateAndDisplayGPAs() {
+        let allGrades = [];
+        let blockGPAs = {};
+
+        this.structure.blocks.forEach(block => {
+            let blockGrades = [];
+            let blockCredits = 0;
+
+            block.courses.forEach(course => {
+                if (block.name !== "XIII" && block.name !== "CPG." && block.name !== "SEM.") {
+                    let coursesGrades = [];
+                    
+                    if (course.grade !== undefined) {
+                        coursesGrades.push({
+                            grade: course.grade,
+                            credits: course.credits || 0
+                        });
+                    }
+                    
+                    if (course.gradeHistory && Array.isArray(course.gradeHistory)) {
+                        course.gradeHistory.forEach(attempt => {
+                            if (attempt.grade !== undefined) {
+                                coursesGrades.push({
+                                    grade: attempt.grade,
+                                    credits: course.credits || 0
+                                });
+                            }
+                        });
+                    }
+                    
+                    coursesGrades.forEach(g => {
+                        allGrades.push(g);
+                        blockGrades.push(g);
+                        blockCredits += g.credits;
+                    });
+                }
+            });
+
+            if (blockGrades.length > 0) {
+                const blockGPA = (blockGrades.reduce((sum, g) => sum + g.grade, 0) / blockGrades.length).toFixed(2);
+                blockGPAs[block.name] = blockGPA;
+            }
+        });
+
+        let gpaGeneral = 0;
+        if (allGrades.length > 0) {
+            gpaGeneral = (allGrades.reduce((sum, g) => sum + g.grade, 0) / allGrades.length).toFixed(2);
+        }
+
+        document.getElementById("gpaGeneral").textContent = gpaGeneral + "%";
     }
 }
 

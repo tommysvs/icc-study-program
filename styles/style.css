@@ -39,6 +39,19 @@ body.dark-mode {
     background-color: #3a3a3a;
 }
 
+.dark-mode .gpa-item {
+    background: linear-gradient(135deg, rgba(94, 195, 167, 0.15), rgba(91, 143, 199, 0.15)) !important;
+    border-color: rgba(94, 195, 167, 0.2) !important;
+}
+
+.dark-mode .gpa-label {
+    color: #aaa;
+}
+
+.dark-mode .gpa-value {
+    color: #5fc3a7;
+}
+
 .dark-mode .program-container {
     background-color: #242424;
 }
@@ -268,6 +281,41 @@ main {
     transition: width 0.5s ease;
 }
 
+.gpa-section {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.gpa-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.5rem 0.6rem;
+    background: linear-gradient(135deg, rgba(46, 139, 111, 0.08), rgba(91, 143, 199, 0.08));
+    border-radius: 10px;
+    border: 1px solid rgba(46, 139, 111, 0.15);
+    cursor: default;
+}
+
+.gpa-label {
+    font-size: 0.65rem;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.gpa-value {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #002080;
+}
+
 .profile-badges {
     width: 100%;
     display: grid;
@@ -448,7 +496,7 @@ main {
     position: relative;
     flex-grow: 0;
     flex-shrink: 0;
-    padding: 0.75rem;
+    padding: 0.85rem 0.75rem 0.75rem;
     flex-direction: column;
     font-size: 0.75rem;
     border: 1px solid #555;
@@ -457,7 +505,12 @@ main {
     cursor: default;
     background-color: #ffffff;
     overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, max-height 0.3s ease;
+    max-height: 200px;
+}
+
+.program-container .block .block_courses .blockClass:hover {
+    max-height: 500px;
 }
 
 .program-container .block .block_courses .blockClass span:nth-child(1) {
@@ -466,8 +519,36 @@ main {
 
 .program-container .block .block_courses .blockClass span:nth-child(2) {
     font-weight: bold;
-    margin-top: 0.25rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.15rem;
+    margin-bottom: 0.15rem;
+}
+
+.course-name {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.2;
+    transition: max-height 0.3s ease;
+    max-height: 2.4em;
+}
+
+.program-container .block .block_courses .blockClass:hover .course-name {
+    display: block;
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    overflow: visible;
+    max-height: 500px;
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0rem;
 }
 
 .program-container .block .block_courses .blockClass::before {
@@ -499,6 +580,41 @@ main {
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
+    display: none;
+}
+
+.course-info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.15rem;
+    width: 100%;
+}
+
+.course-grade {
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    background-color: rgba(0, 32, 128, 0.1);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #002080;
+}
+
+.course-year {
+    font-size: 0.65rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.dark-mode .course-grade {
+    background-color: rgba(91, 192, 235, 0.15);
+    color: #5bc0eb;
+}
+
+.dark-mode .course-year {
+    color: #999;
 }
 
 .status-approved { 
@@ -806,8 +922,11 @@ footer a:hover {
     }
 
     .status-indicators {
-        gap: 0.5rem;
+        display: grid;
+        grid-template-columns: 0.3fr 0fr;
+        gap: 0.3rem;
         font-size: 0.70rem;
+        justify-items: start;
     }
 
     .badges-container {
@@ -830,13 +949,18 @@ footer a:hover {
 
     .program-container h3 {
         font-size: 1.2rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .program-container .status-indicators {
+        margin-top: 0rem;
     }
 
     .program-container .block .block_courses .blockClass {
         width: calc(50% - 0.4rem);
         min-width: unset;
-        align-items: center;
-        text-align: center;
+        align-items: start;
+        text-align: start;
     }
 
     .program-container .block .block_courses {
