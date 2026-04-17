@@ -1,0 +1,165 @@
+@media (max-width: 768px) {
+	main {
+		flex-direction: column;
+		padding: 0.5rem;
+	}
+
+	header {
+		height: auto;
+		padding: 0.75rem;
+
+		.header-container {
+			gap: 1rem;
+		}
+
+		.header-center h1 {
+			font-size: 1.5rem;
+		}
+
+		.header-center p {
+			font-size: 0.8rem;
+		}
+
+		.logo {
+			height: 45px;
+		}
+	}
+
+	.sidebar-wrapper {
+		width: 100%;
+		position: static;
+	}
+
+	.profile-sidebar {
+		width: 100%;
+		position: static;
+	}
+
+	.profile-card {
+		position: static;
+		padding: 2rem 1.5rem;
+	}
+
+	.profile-avatar {
+		width: 120px;
+		height: 120px;
+	}
+
+	.profile-name {
+		font-size: 1.3rem;
+	}
+
+	.profile-title {
+		font-size: 0.9rem;
+	}
+
+	.profile-badges {
+		width: 100%;
+
+		.badge {
+			padding: 0.6rem 0.85rem;
+			font-size: 0.8rem;
+		}
+	}
+
+	.program-container {
+		padding: 0.5rem;
+
+		.block {
+			flex-direction: column;
+			gap: 0.5rem;
+
+			.block_label {
+				width: 100%;
+				padding: 0.5rem;
+				font-size: 1.2rem;
+			}
+
+			.block_courses {
+				width: 100%;
+				justify-content: center;
+
+				.blockClass {
+					width: calc(50% - 0.375rem);
+					min-width: 8rem;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	header {
+		height: auto;
+
+		.header-container {
+			gap: 0.75rem;
+		}
+
+		.header-center h1 {
+			font-size: 1.2rem;
+			letter-spacing: 1px;
+		}
+
+		.header-center p {
+			font-size: 0.75rem;
+		}
+
+		.logo {
+			height: 40px;
+			width: auto;
+		}
+	}
+
+	.status-indicators {
+		display: grid;
+		grid-template-columns: 0.3fr 0fr;
+		gap: 0.3rem;
+		font-size: 0.7rem;
+		justify-items: start;
+	}
+
+	.badge {
+		padding: 0.5rem 1rem;
+		font-size: 0.85rem;
+		flex: 0 1 45%;
+		text-align: center;
+
+		strong {
+			font-size: 0.95rem;
+		}
+	}
+
+	.program-container {
+		h3 {
+			font-size: 1.2rem;
+			margin-bottom: 0.25rem;
+		}
+
+		.status-indicators {
+			margin-top: 0;
+		}
+
+		.block {
+			.block_courses {
+				gap: 0.5rem;
+				justify-content: flex-start;
+
+				.blockClass {
+					width: calc(50% - 0.4rem);
+					min-width: unset;
+					align-items: start;
+					text-align: start;
+				}
+			}
+		}
+
+		.block:nth-child(15) .block_courses {
+			justify-content: center;
+
+			.blockClass {
+				width: 70%;
+			}
+		}
+	}
+}

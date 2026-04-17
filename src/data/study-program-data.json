@@ -472,7 +472,9 @@
                     "code": "IF324",
                     "name": "Circuitos Lógicos",
                     "credits": 3,
-                    "requisites": [],
+                    "requisites": [
+                        "IF319"
+                    ],
                     "status": "Pendiente"
                 },
                 {
