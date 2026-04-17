@@ -1,9 +1,39 @@
-# Plan de estudio de ICC
+# Plan de estudio ICC
 
-Proyecto enfocado en llevar el avance personal de la carrera de Ingeniería en Ciencias de la Computación (ICC) en UNICAH. Este repositorio contiene una aplicación web ligera para ayudar a organizar, registrar y visualizar el progreso académico y actividades relacionadas con la carrera.
+Aplicación web para visualizar el plan de estudio de Ingeniería en Ciencias de la Computación (ICC) de UNICAH, con progreso académico, promedio general, bloques por periodo y resaltado de prerrequisitos.
 
-## Características
+## Tecnologías
 
-- Registrar asignaturas y avances.
-- Visualizar progreso por periodo o por asignatura.
-- Interfaz web sencilla y responsiva.
+- React 19
+- TypeScript
+- Vite
+- Less
+
+## Funcionalidades
+
+- Visualización del plan de estudio por bloques.
+- Tarjetas de curso con código, nombre, créditos, estado y datos adicionales.
+- Cálculo de progreso general y porcentaje de avance.
+- Cálculo de promedio académico general.
+- Resaltado de prerrequisitos y materias habilitadas al pasar el mouse.
+- Bloques colapsables para secciones especiales.
+- Modo oscuro persistente con `localStorage`.
+- Despliegue automático a GitHub Pages.
+
+## Estructura del proyecto
+
+```text
+src/
+  app/                # Composición raíz y layout global
+  components/         # Header, footer, sidebar, programa y UI reutilizable
+  data/               # JSON del plan de estudio
+  hooks/              # Carga de datos, métricas, relaciones y tema
+  pages/              # Página principal del plan de estudio
+  styles/             # LESS modularizado
+  types/              # Tipos de TypeScript
+  utils/              # Cálculos y helpers puros
+public/
+  img/                # Imágenes estáticas usadas por la app
+.github/
+  workflows/          # Deploy a GitHub Pages
+```
