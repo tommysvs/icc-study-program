@@ -32,9 +32,8 @@ export interface StudyProgram {
 export interface ProgramMetrics {
 	totalCourses: number;
 	approvedCourses: number;
+	inProgressCourses: number;
 	remainingCourses: number;
-	totalWithoutExtras: number;
-	approvedWithoutExtras: number;
 	percentage: number;
 	gpaGeneral: string;
 }

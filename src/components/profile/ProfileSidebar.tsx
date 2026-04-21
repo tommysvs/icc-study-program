@@ -25,9 +25,9 @@ export function ProfileSidebar({ metrics }: ProfileSidebarProps) {
 				</div>
 
 				<StatsBadges
-					program={`${metrics.approvedWithoutExtras}/${metrics.totalWithoutExtras}`}
-					remaining={metrics.remainingCourses}
 					approved={metrics.approvedCourses}
+					remaining={metrics.remainingCourses}
+					inProgress={metrics.inProgressCourses}
 					total={metrics.totalCourses}
 				/>
 			</aside>

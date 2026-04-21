@@ -3,48 +3,40 @@ import { calculateGeneralGpa } from './gpa';
 
 const approvedStatuses = new Set(['Aprobado', 'Suficiencia']);
 
-function shouldCountTotal(blockName: string): boolean {
-	return blockName !== 'XIII' && blockName !== 'SEM.';
-}
-
-function shouldCountWithoutExtras(blockName: string): boolean {
+function shouldCountPensum(blockName: string): boolean {
 	return blockName !== 'CPG.' && blockName !== 'SEM.' && blockName !== 'XIII';
 }
 
 export function calculateProgramMetrics(program: StudyProgram): ProgramMetrics {
-	let totalCourses = 0;
+	let pensumCourses = 0;
 	let approvedCourses = 0;
-	let totalWithoutExtras = 0;
-	let approvedWithoutExtras = 0;
+	let inProgressCourses = 0;
 
 	for (const block of program.blocks) {
 		for (const course of block.courses) {
-			if (shouldCountTotal(block.name)) {
-				totalCourses += 1;
-
-				if (approvedStatuses.has(course.status)) {
-					approvedCourses += 1;
-				}
+			if (!shouldCountPensum(block.name)) {
+				continue;
 			}
 
-			if (shouldCountWithoutExtras(block.name)) {
-				totalWithoutExtras += 1;
+			pensumCourses += 1;
 
-				if (approvedStatuses.has(course.status)) {
-					approvedWithoutExtras += 1;
-				}
+			if (approvedStatuses.has(course.status)) {
+				approvedCourses += 1;
+			} else if (course.status === 'Cursando') {
+				inProgressCourses += 1;
 			}
 		}
 	}
 
-	const percentage = totalWithoutExtras === 0 ? 0 : Math.round((approvedWithoutExtras / totalWithoutExtras) * 100);
+	const totalCourses = approvedCourses + inProgressCourses;
+	const remainingCourses = Math.max(0, pensumCourses - totalCourses);
+	const percentage = pensumCourses === 0 ? 0 : Math.round((approvedCourses / pensumCourses) * 100);
 
 	return {
 		totalCourses,
 		approvedCourses,
-		remainingCourses: totalCourses - approvedCourses,
-		totalWithoutExtras,
-		approvedWithoutExtras,
+		inProgressCourses,
+		remainingCourses,
 		percentage,
 		gpaGeneral: calculateGeneralGpa(program),
 	};
