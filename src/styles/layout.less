@@ -1,9 +1,35 @@
+.app-wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
 main {
 	display: flex;
 	gap: 1.5rem;
 	max-width: 1400px;
 	margin: 1rem auto;
 	padding: 0 1rem;
+
+	&[style*="flexDirection: column"] {
+		max-width: 900px;
+	}
+}
+
+.app-layout-main {
+	display: flex;
+	gap: 1.5rem;
+	max-width: 1400px;
+	margin: 1rem auto;
+	padding: 0 1rem;
+	width: calc(100% - 2rem);
+	flex: 1;
+}
+
+.app-layout-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
 }
 
 header {
@@ -33,6 +59,13 @@ header {
 
 	.header-left {
 		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+
+	.header-right {
+		flex-shrink: 0;
 	}
 
 	.header-center {
@@ -57,11 +90,6 @@ header {
 	.logo {
 		height: 60px;
 		width: auto;
-	}
-
-	.dark-mode & {
-		background-color: var(--header-bg-dark);
-		border-color: rgba(255, 255, 255, 0.1);
 	}
 }
 
