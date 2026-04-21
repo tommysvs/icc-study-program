@@ -55,12 +55,6 @@
                     "year": 2015,
                     "gradeHistory": [
                         {
-                            "grade": 81,
-                            "year": 2015,
-                            "period": "II",
-                            "status": "Aprobado"
-                        },
-                        {
                             "grade": 55,
                             "year": 2015,
                             "period": "I",
@@ -97,12 +91,6 @@
                     "year": 2015,
                     "period": "III",
                     "gradeHistory": [
-                        {
-                            "grade": 75,
-                            "year": 2015,
-                            "period": "III",
-                            "status": "Aprobado"
-                        },
                         {
                             "grade": 50,
                             "year": 2015,
@@ -163,12 +151,6 @@
                     "period": "III",
                     "gradeHistory": [
                         {
-                            "grade": 92,
-                            "year": 2022,
-                            "period": "III",
-                            "status": "Aprobado"
-                        },
-                        {
                             "grade": 43,
                             "year": 2015,
                             "period": "III",
@@ -188,12 +170,6 @@
                     "year": 2016,
                     "period": "II",
                     "gradeHistory": [
-                        {
-                            "grade": 70,
-                            "year": 2016,
-                            "period": "II",
-                            "status": "Aprobado"
-                        },
                         {
                             "grade": 59,
                             "year": 2016,
@@ -226,12 +202,6 @@
                     "year": 2024,
                     "period": "III",
                     "gradeHistory": [
-                        {
-                            "grade": 82,
-                            "year": 2024,
-                            "period": "III",
-                            "status": "Aprobado"
-                        },
                         {
                             "grade": 65,
                             "year": 2015,
@@ -318,7 +288,7 @@
                 {
                     "code": "IF322",
                     "name": "Base de Datos I",
-                    "credits": 34,
+                    "credits": 3,
                     "requisites": [],
                     "status": "Aprobado",
                     "grade": 86,
@@ -330,10 +300,9 @@
                     "name": "Contabilidad",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Reprobado",
-                    "grade": 34,
-                    "year": 2015,
-                    "period": "III",
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II",
                     "gradeHistory": [
                         {
                             "grade": 34,
@@ -350,20 +319,16 @@
                     "requisites": [
                         "IF301"
                     ],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 95,
                     "year": 2026,
                     "period": "I",
                     "gradeHistory": [
                         {
-                            "year": 2026,
-                            "period": "I",
-                            "status": "Cursando"
-                        },
-                        {
                             "grade": 33,
                             "year": 2024,
                             "period": "III",
-                            "status": "Aprobado"
+                            "status": "Reprobado"
                         },
                         {
                             "grade": 46,
@@ -391,12 +356,6 @@
                     "year": 2022,
                     "period": "II",
                     "gradeHistory": [
-                        {
-                            "grade": 76,
-                            "year": 2022,
-                            "period": "II",
-                            "status": "Aprobado"
-                        },
                         {
                             "grade": 0,
                             "year": 2022,
@@ -455,12 +414,6 @@
                     "period": "II",
                     "gradeHistory": [
                         {
-                            "grade": 84,
-                            "year": 2023,
-                            "period": "II",
-                            "status": "Aprobado"
-                        },
-                        {
                             "grade": 53,
                             "year": 2022,
                             "period": "III",
@@ -475,7 +428,9 @@
                     "requisites": [
                         "IF319"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 },
                 {
                     "code": "FI501",
@@ -506,12 +461,6 @@
                     "year": 2025,
                     "period": "II",
                     "gradeHistory": [
-                        {
-                            "grade": 95,
-                            "year": 2025,
-                            "period": "II",
-                            "status": "Aprobado"
-                        },
                         {
                             "grade": 32,
                             "year": 2022,
@@ -614,7 +563,9 @@
                     "name": "Microcontroladores",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 }
             ]
         },
@@ -683,7 +634,8 @@
                     "requisites": [
                         "IF353"
                     ],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 80,
                     "year": 2026,
                     "period": "I"
                 },
@@ -703,16 +655,15 @@
                     "requisites": [
                         "AD104"
                     ],
-                    "status": "Pendiente",
-                    "year": 2026,
-                    "period": "I"
+                    "status": "Pendiente"
                 },
                 {
                     "code": "IF356",
                     "name": "Gestión y Estándares de Tecnología de Información",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 98,
                     "year": 2026,
                     "period": "I"
                 },
@@ -740,7 +691,9 @@
                     "requisites": [
                         "IF357"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 },
                 {
                     "code": "IF347",
@@ -822,7 +775,8 @@
                     "name": "Excel Avanzado para Ingenierías",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 88,
                     "year": 2026,
                     "period": "I"
                 }
@@ -837,6 +791,21 @@
                     "credits": 0,
                     "requisites": [],
                     "status": "Pendiente"
+                }
+            ]
+        },
+        {
+            "name": "OTR.",
+            "courses": [
+                {
+                    "code": "FS301",
+                    "name": "Física II",
+                    "credits": 3,
+                    "requisites": [],
+                    "status": "Aprobado",
+                    "grade": 89,
+                    "year": 2016,
+                    "period": "II"
                 }
             ]
         },
