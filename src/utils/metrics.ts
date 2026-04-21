@@ -4,7 +4,7 @@ import { calculateGeneralGpa } from './gpa';
 const approvedStatuses = new Set(['Aprobado', 'Suficiencia']);
 
 function shouldCountPensum(blockName: string): boolean {
-	return blockName !== 'CPG.' && blockName !== 'SEM.' && blockName !== 'XIII';
+	return blockName !== 'OTR.' && blockName !== 'CPG.' && blockName !== 'SEM.' && blockName !== 'XIII';
 }
 
 export function calculateProgramMetrics(program: StudyProgram): ProgramMetrics {

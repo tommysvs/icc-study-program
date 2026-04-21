@@ -10,7 +10,7 @@ interface ProgramBlockProps {
 	onLeaveCourse: () => void;
 }
 
-const COLLAPSIBLE_BLOCKS = new Set(['CPG.', 'SEM.']);
+const COLLAPSIBLE_BLOCKS = new Set(['OTR.', 'CPG.', 'SEM.']);
 
 export function ProgramBlock({ block, hoveredCourseCode, relations, onHoverCourse, onLeaveCourse }: ProgramBlockProps) {
 	const [isOpen, setIsOpen] = useState(false);
