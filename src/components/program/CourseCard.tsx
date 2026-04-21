@@ -10,6 +10,8 @@ interface CourseCardProps {
 }
 
 export function CourseCard({ course, isRequisite = false, isOpening = false, onHoverStart, onHoverEnd }: CourseCardProps) {
+	const yearLabel = course.year !== undefined ? `${course.year}${course.period ? `-${course.period}` : ''}` : undefined;
+
 	const className = [
 		'blockClass',
 		getCourseStatusClass(course.status),
@@ -28,10 +30,10 @@ export function CourseCard({ course, isRequisite = false, isOpening = false, onH
 
 			<span className="course-name">{course.name}</span>
 
-			{(course.grade !== undefined || course.year !== undefined) && (
+			{(course.grade !== undefined || yearLabel !== undefined) && (
 				<div className="course-info-container">
 					{course.grade !== undefined && <div className="course-grade">{course.grade}%</div>}
-					{course.year !== undefined && <div className="course-year">{course.year}</div>}
+					{yearLabel !== undefined && <div className="course-year">{yearLabel}</div>}
 				</div>
 			)}
 		</div>
