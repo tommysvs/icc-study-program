@@ -38,7 +38,7 @@ export function TimelineYear({ year, periods }: TimelineYearProps) {
 			{isExpanded && (
 				<div className="periods-container">
 					{periods.map((period) => (
-						<TimelinePeriod key={`${year}-${period.period}`} period={period} year={year} />
+						<TimelinePeriod key={`${year}-${period.period}`} period={period} />
 					))}
 				</div>
 			)}

@@ -4,12 +4,10 @@ import { CourseItem } from './CourseItem';
 
 interface TimelinePeriodProps {
 	period: PeriodStats;
-	year: number;
 }
 
-export function TimelinePeriod({ period, year }: TimelinePeriodProps) {
+export function TimelinePeriod({ period }: TimelinePeriodProps) {
 	const [isExpanded, setIsExpanded] = useState(false);
-	const periodKey = `${year}-${period.period}`;
 
 	return (
 		<div className="timeline-period">
