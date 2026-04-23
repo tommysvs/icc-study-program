@@ -68,6 +68,31 @@ header {
 		flex-shrink: 0;
 	}
 
+	.header-back-button {
+		background: rgba(255, 255, 255, 0.3);
+		border: 1px solid white;
+		color: white;
+		border-radius: 100px;
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+		font-size: 0.9rem;
+		font-weight: bold;
+		transition: all 0.3s ease;
+		box-shadow: 0 4px 12px rgba(255, 255, 255, 0.18);
+
+		&:hover {
+			color: var(--secondary-color);
+			background: rgba(255, 255, 255, 0.28);
+			box-shadow: 0 6px 16px rgba(253, 185, 19, 0.28);
+			border: 1px solid var(--secondary-color);
+		}
+
+		&:focus-visible {
+			outline: 2px solid #fff2cc;
+			outline-offset: 2px;
+		}
+	}
+
 	.header-center {
 		flex: 1;
 		text-align: left;
