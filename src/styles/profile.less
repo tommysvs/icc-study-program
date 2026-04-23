@@ -83,9 +83,40 @@
 
 .progress-fill {
 	height: 100%;
-	background: linear-gradient(90deg, var(--brand-green), #5fc3a7);
+	background: linear-gradient(115deg, var(--brand-green) 0%, #5fc3a7 45%, #86dfc8 55%, #5fc3a7 70%, var(--brand-green) 100%);
+	background-size: 220% 100%;
 	border-radius: 10px;
 	transition: width 0.5s ease;
+	transform-origin: left center;
+	animation: progress-reveal 0.8s ease-out both, progress-shimmer 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes progress-reveal {
+	from {
+		transform: scaleX(0.08);
+		opacity: 0.5;
+	}
+
+	to {
+		transform: scaleX(1);
+		opacity: 1;
+	}
+}
+
+@keyframes progress-shimmer {
+	from {
+		background-position: 15% 50%;
+	}
+
+	to {
+		background-position: 85% 50%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.progress-fill {
+		animation: none;
+	}
 }
 
 .gpa-section {
