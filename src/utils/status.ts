@@ -18,9 +18,9 @@ export function getCourseStatusClass(status: CourseStatus): string {
 }
 
 export const statusLegendItems: StatusLegendItem[] = [
-	{ name: 'Aprobado', className: 'aprobado' },
-	{ name: 'Reprobado', className: 'reprobado' },
-	{ name: 'Cursando', className: 'cursando' },
-	{ name: 'Pendiente', className: 'pendiente' },
+	{ name: 'Aprobado', className: 'approved' },
+	{ name: 'Reprobado', className: 'failed' },
+	{ name: 'Cursando', className: 'taking' },
+	{ name: 'Pendiente', className: 'pending' },
 ];
 
