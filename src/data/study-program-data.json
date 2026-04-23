@@ -244,7 +244,9 @@
                     "requisites": [
                         "MT303"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 },
                 {
                     "code": "IF301",
@@ -589,7 +591,9 @@
                     "name": "Programación Móvil I",
                     "credits": 4,
                     "requisites": [],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 },
                 {
                     "code": "AD104",
@@ -691,16 +695,16 @@
                     "requisites": [
                         "IF357"
                     ],
-                    "status": "Cursando",
-                    "year": 2026,
-                    "period": "II"
+                    "status": "Pendiente"
                 },
                 {
                     "code": "IF347",
                     "name": "Programación de Negocios",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 },
                 {
                     "code": "AD402",
@@ -727,7 +731,9 @@
                     "requisites": [
                         "IF356"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 }
             ]
         },
@@ -976,7 +982,9 @@
                     "requisites": [
                         "CR501"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 }
             ]
         }
