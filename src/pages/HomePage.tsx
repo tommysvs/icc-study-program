@@ -12,18 +12,12 @@ export function HomePage({ onNavigate }: HomePageProps) {
 				<p>Selecciona una opción para comenzar</p>
 				
 				<div className="menu-cards">
-					<button
-						onClick={() => onNavigate('program')}
-						className="menu-card-button"
-					>
+					<button onClick={() => onNavigate('program')} className="menu-card-button">
 						<h3>Plan de estudio</h3>
 						<p>Ve todos los cursos de tu carrera</p>
 					</button>
 					
-					<button
-						onClick={() => onNavigate('timeline')}
-						className="menu-card-button"
-					>
+					<button onClick={() => onNavigate('timeline')} className="menu-card-button">
 						<h3>Progreso académico</h3>
 						<p>Revisa tu progreso año a año</p>
 					</button>
