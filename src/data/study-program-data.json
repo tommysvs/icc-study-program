@@ -565,9 +565,7 @@
                     "name": "Microcontroladores",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Cursando",
-                    "year": 2026,
-                    "period": "II"
+                    "status": "Pendiente"
                 }
             ]
         },
@@ -722,7 +720,9 @@
                     "requisites": [
                         "IF356"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 },
                 {
                     "code": "IF358",
