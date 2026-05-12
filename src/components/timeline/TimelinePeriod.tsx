@@ -15,7 +15,7 @@ export function TimelinePeriod({ period }: TimelinePeriodProps) {
 				className={`period-header ${isExpanded ? 'expanded' : ''}`}
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
-				<span className="expand-icon">{isExpanded ? '▼' : '▶'}</span>
+				<span className="expand-icon">{isExpanded ? '▼\uFE0E' : '▶\uFE0E'}</span>
 				<span className="period-title">{period.period} Período</span>
 				<div className="period-stats">
 					<span className="success">Aprobadas: {period.approved}</span>

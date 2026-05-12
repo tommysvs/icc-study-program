@@ -24,7 +24,7 @@ export function ProgramBlock({ block, hoveredCourseCode, relations, onHoverCours
 	return (
 		<div className="block">
 			<div className={labelClassName} onClick={() => isCollapsible && setIsOpen((prev) => !prev)}>
-				{isCollapsible ? <span className="toggle-icon">▼</span> : null}
+				{isCollapsible ? <span className="toggle-icon">▼\uFE0E</span> : null}
 				{block.name}
 			</div>
 
