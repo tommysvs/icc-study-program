@@ -25,7 +25,7 @@ export function TimelineYear({ year, periods }: TimelineYearProps) {
 				className={`year-header ${isExpanded ? 'expanded' : ''}`}
 				onClick={() => setIsExpanded(!isExpanded)}
 			>
-			<span className="expand-icon">{isExpanded ? '▼\uFE0E' : '▶\uFE0E'}</span>
+			<span className="expand-icon" dangerouslySetInnerHTML={{ __html: '&#x25B6;&#xFE0E;' }} />
 			<span className="year-title">{year}</span>
 			<div className="year-stats">
 				<span className="success">Aprobadas: {yearStats.totalApproved}</span>

@@ -94,8 +94,12 @@
 	.expand-icon {
 		flex-shrink: 0;
 		font-size: 0.8rem;
-		transition: transform 0.2s ease;
+			transition: transform 0.2s ease;
 	}
+
+		&.expanded .expand-icon {
+			transform: rotate(90deg);
+		}
 }
 
 .periods-container {
@@ -176,7 +180,12 @@
 	.expand-icon {
 		flex-shrink: 0;
 		font-size: 0.75rem;
+			transition: transform 0.2s ease;
 	}
+
+		&.expanded .expand-icon {
+			transform: rotate(90deg);
+		}
 }
 
 .courses-list {

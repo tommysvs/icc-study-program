@@ -24,7 +24,12 @@ export function ProgramBlock({ block, hoveredCourseCode, relations, onHoverCours
 	return (
 		<div className="block">
 			<div className={labelClassName} onClick={() => isCollapsible && setIsOpen((prev) => !prev)}>
-				{isCollapsible ? <span className="toggle-icon">▼\uFE0E</span> : null}
+				{isCollapsible ? (
+					<span
+						className="toggle-icon"
+						dangerouslySetInnerHTML={{ __html: '&#x25B6;&#xFE0E;' }}
+					/>
+				) : null}
 				{block.name}
 			</div>
 
