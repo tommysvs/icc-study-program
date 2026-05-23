@@ -244,9 +244,7 @@
                     "requisites": [
                         "MT303"
                     ],
-                    "status": "Cursando",
-                    "year": 2026,
-                    "period": "II"
+                    "status": "Pendiente"
                 },
                 {
                     "code": "IF301",
@@ -765,7 +763,9 @@
                     "requisites": [
                         "IF391"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "II"
                 },
                 {
                     "code": "IF380",
@@ -982,9 +982,7 @@
                     "requisites": [
                         "CR501"
                     ],
-                    "status": "Cursando",
-                    "year": 2026,
-                    "period": "II"
+                    "status": "Pendiente"
                 }
             ]
         }
