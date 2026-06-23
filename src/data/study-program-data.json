@@ -255,8 +255,8 @@
                     ],
                     "status": "Aprobado",
                     "grade": 78,
-                    "year": 2024,
-                    "period": "III"
+                    "year": 2016,
+                    "period": "I"
                 },
                 {
                     "code": "FS201",
@@ -820,6 +820,16 @@
             "courses": [
                 {
                     "code": "CNFS1",
+                    "name": "Reforzamiento de Matemáticas",
+                    "credits": 2,
+                    "requisites": [ ],
+                    "status": "Aprobado",
+                    "grade": 71,
+                    "year": 2015,
+                    "period": "I"
+                },
+                {
+                    "code": "CNFS1",
                     "name": "Laboratorio de Física I",
                     "credits": 2,
                     "requisites": [
@@ -955,7 +965,7 @@
                 },
                 {
                     "code": "ESVU2",
-                    "name": "Seminario de Madurez en la Vida Universitario",
+                    "name": "Seminario de Madurez en la Vida Universitaria",
                     "credits": 1,
                     "requisites": [
                         "FI501"
