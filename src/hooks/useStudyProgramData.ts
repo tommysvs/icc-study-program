@@ -18,31 +18,31 @@ export function useStudyProgramData(): StudyProgramDataState {
 
 		async function loadData() {
 			try {
-				setLoading(true);
+			setLoading(true);
 
-				const parsedData = studyProgramData as StudyProgram;
+			const parsedData = studyProgramData as StudyProgram;
 
-				if (active) {
-					setData(parsedData);
-					setError(null);
-				}
+			if (active) {
+				setData(parsedData);
+				setError(null);
+			}
 			} catch (err) {
-				if (active) {
-					setError(err instanceof Error ? err.message : 'Error inesperado al cargar los datos.');
-				}
+			if (active) {
+				setError(err instanceof Error ? err.message : 'Error inesperado al cargar los datos.');
+			}
 			} finally {
-				if (active) {
-					setLoading(false);
-				}
+			if (active) {
+				setLoading(false);
 			}
 		}
+	}
 
-		void loadData();
+	void loadData();
 
-		return () => {
-			active = false;
-		};
-	}, []);
+	return () => {
+		active = false;
+	};
+	}, [studyProgramData]);
 
 	return { data, loading, error };
 }
