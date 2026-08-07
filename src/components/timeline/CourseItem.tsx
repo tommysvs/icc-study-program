@@ -8,6 +8,7 @@ export function CourseItem({ course }: CourseItemProps) {
 	const getStatusClass = (status: string) => {
 		const lower = status.toLowerCase();
 		if (lower === 'aprobado') return 'success';
+		if (lower === 'suficiencia') return 'success';
 		if (lower === 'reprobado') return 'failed';
 		if (lower === 'cursando') return 'in-progress';
 		return 'pending';
@@ -23,8 +24,8 @@ export function CourseItem({ course }: CourseItemProps) {
 				<span className={getStatusClass(course.status)}>
 					{course.status}
 				</span>
-				{course.grade && (
-					<span className="grade">{course.grade}%</span>
+				{course.grade !== undefined && course.grade !== null && (
+				<span className="grade">{course.grade}%</span>
 				)}
 				<span className="credits">{course.credits} crédito(s)</span>
 			</div>

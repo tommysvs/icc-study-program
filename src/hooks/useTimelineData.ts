@@ -87,7 +87,7 @@ export function useTimelineData(program: StudyProgram | null): TimelineData {
 					const historicalCourse: Course = {
 						...course,
 						status: attempt.status || course.status,
-						grade: attempt.grade || course.grade,
+						grade: attempt.grade ?? course.grade,
 					};
 					
 					historyStats.courses.push(historicalCourse);
@@ -107,8 +107,8 @@ export function useTimelineData(program: StudyProgram | null): TimelineData {
 
 	timelineMap.forEach(stats => {
 		const gradesSum = stats.courses
-			.filter(c => c.grade)
-			.reduce((sum, c) => sum + (c.grade || 0), 0);
+			.filter(c => c.grade !== undefined && c.grade !== null)
+			.reduce((sum, c) => sum + (c.grade ?? 0), 0);
 		const coursesWithGrades = stats.courses.filter(c => c.grade).length;
 		stats.avgGrade = coursesWithGrades > 0 ? Math.round(gradesSum / coursesWithGrades) : 0;
 	});
