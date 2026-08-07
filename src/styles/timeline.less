@@ -282,29 +282,6 @@
 	}
 }
 
-.credits {
-	.pill-base();
-	background: rgba(30, 77, 123, 0.15);
-	color: #0f2946;
-
-	body.dark-mode & {
-		background: rgba(66, 133, 244, 0.25);
-		color: #90caf9;
-	}
-}
-
-.grade {
-	.pill-base();
-	background: rgba(128, 128, 128, 0.15);
-	color: #333;
-    width: auto;
-
-	body.dark-mode & {
-		background: rgba(156, 156, 156, 0.25);
-		color: #bdbdbd;
-	}
-}
-
 .failed {
 	.pill-base();
 	background: rgba(211, 47, 47, 0.15);
@@ -313,6 +290,33 @@
 	body.dark-mode & {
 		background: rgba(244, 67, 54, 0.25);
 		color: #ef5350;
+	}
+}
+
+.pending,
+.grade {
+	.pill-base();
+	background: rgba(128, 128, 128, 0.15);
+	color: #333;
+    
+	body.dark-mode & {
+		background: rgba(156, 156, 156, 0.25);
+		color: #bdbdbd;
+	}
+}
+
+.grade {
+	width: 4rem;
+}
+
+.credits {
+	.pill-base();
+	background: rgba(30, 77, 123, 0.15);
+	color: #0f2946;
+
+	body.dark-mode & {
+		background: rgba(66, 133, 244, 0.25);
+		color: #90caf9;
 	}
 }
 

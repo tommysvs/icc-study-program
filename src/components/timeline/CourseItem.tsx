@@ -9,7 +9,8 @@ export function CourseItem({ course }: CourseItemProps) {
 		const lower = status.toLowerCase();
 		if (lower === 'aprobado') return 'success';
 		if (lower === 'reprobado') return 'failed';
-		return 'in-progress';
+		if (lower === 'cursando') return 'in-progress';
+		return 'pending';
 	};
 
 	return (
