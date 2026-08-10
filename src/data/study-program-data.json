@@ -300,7 +300,8 @@
                     "name": "Contabilidad",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 97,
                     "year": 2026,
                     "period": "II",
                     "gradeHistory": [
@@ -428,7 +429,8 @@
                     "requisites": [
                         "IF319"
                     ],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 70,
                     "year": 2026,
                     "period": "II"
                 },
@@ -585,9 +587,10 @@
                 {
                     "code": "IF351",
                     "name": "Programación Móvil I",
-                    "credits": 4,
+                    "credits": 3,
                     "requisites": [],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 96,
                     "year": 2026,
                     "period": "II"
                 },
@@ -698,7 +701,8 @@
                     "name": "Programación de Negocios",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 100,
                     "year": 2026,
                     "period": "II"
                 },
@@ -718,7 +722,8 @@
                     "requisites": [
                         "IF356"
                     ],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 94,
                     "year": 2026,
                     "period": "II"
                 },
@@ -729,7 +734,8 @@
                     "requisites": [
                         "IF356"
                     ],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 89,
                     "year": 2026,
                     "period": "II"
                 }
@@ -763,7 +769,8 @@
                     "requisites": [
                         "IF391"
                     ],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 95,
                     "year": 2026,
                     "period": "II"
                 },
@@ -819,7 +826,7 @@
             "name": "CPG.",
             "courses": [
                 {
-                    "code": "CNFS1",
+                    "code": "CSMT1",
                     "name": "Reforzamiento de Matemáticas",
                     "credits": 2,
                     "requisites": [ ],
