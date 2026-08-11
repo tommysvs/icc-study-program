@@ -12,10 +12,17 @@ interface ProgramBlockProps {
 
 const COLLAPSIBLE_BLOCKS = new Set(['OTR.', 'CPG.', 'SEM.']);
 
-export function ProgramBlock({ block, hoveredCourseCode, relations, onHoverCourse, onLeaveCourse }: ProgramBlockProps) {
+export function ProgramBlock({
+	block,
+	hoveredCourseCode,
+	relations,
+	onHoverCourse,
+	onLeaveCourse,
+}: ProgramBlockProps) {
 	const [isOpen, setIsOpen] = useState(false);
 	const isCollapsible = COLLAPSIBLE_BLOCKS.has(block.name);
 	const relationState = hoveredCourseCode ? relations[hoveredCourseCode] : undefined;
+	const showCourses = !isCollapsible || isOpen;
 
 	const labelClassName = ['block_label', isCollapsible ? 'collapsible' : '', isOpen ? 'active' : '']
 		.filter(Boolean)
@@ -33,7 +40,7 @@ export function ProgramBlock({ block, hoveredCourseCode, relations, onHoverCours
 				{block.name}
 			</div>
 
-			<div className="block_courses" style={{ display: !isCollapsible || isOpen ? 'flex' : 'none' }}>
+			<div className="block_courses" style={{ display: showCourses ? 'flex' : 'none' }}>
 				{block.courses.map((course) => (
 					<CourseCard
 						key={course.code}
