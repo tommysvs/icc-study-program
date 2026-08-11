@@ -244,7 +244,9 @@
                     "requisites": [
                         "MT303"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 },
                 {
                     "code": "IF301",
@@ -500,7 +502,9 @@
                     "requisites": [
                         "IF323"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 },
                 {
                     "code": "IF329",
@@ -509,7 +513,9 @@
                     "requisites": [
                         "IF324"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 }
             ]
         },
@@ -565,7 +571,9 @@
                     "name": "Microcontroladores",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 }
             ]
         },
@@ -658,7 +666,9 @@
                     "requisites": [
                         "AD104"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 },
                 {
                     "code": "IF356",
@@ -694,7 +704,9 @@
                     "requisites": [
                         "IF357"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 },
                 {
                     "code": "IF347",
@@ -760,7 +772,9 @@
                     "requisites": [
                         "IF347"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 },
                 {
                     "code": "IF350",
