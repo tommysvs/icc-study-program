@@ -498,7 +498,7 @@
                 {
                     "code": "IF328",
                     "name": "Redes II",
-                    "credits": 3,
+                    "credits": 4,
                     "requisites": [
                         "IF323"
                     ],
@@ -513,9 +513,7 @@
                     "requisites": [
                         "IF324"
                     ],
-                    "status": "Cursando",
-                    "year": 2026,
-                    "period": "III"
+                    "status": "Pendiente"
                 }
             ]
         },
@@ -571,9 +569,7 @@
                     "name": "Microcontroladores",
                     "credits": 3,
                     "requisites": [],
-                    "status": "Cursando",
-                    "year": 2026,
-                    "period": "III"
+                    "status": "Pendiente"
                 }
             ]
         },
@@ -657,7 +653,9 @@
                     "requisites": [
                         "IF351"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 },
                 {
                     "code": "MT304",
@@ -772,9 +770,7 @@
                     "requisites": [
                         "IF347"
                     ],
-                    "status": "Cursando",
-                    "year": 2026,
-                    "period": "III"
+                    "status": "Pendiente"
                 },
                 {
                     "code": "IF350",
@@ -1013,7 +1009,9 @@
                     "requisites": [
                         "CR501"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 }
             ]
         }
