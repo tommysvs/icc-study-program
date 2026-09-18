@@ -664,9 +664,7 @@
                     "requisites": [
                         "AD104"
                     ],
-                    "status": "Cursando",
-                    "year": 2026,
-                    "period": "III"
+                    "status": "Pendiente"
                 },
                 {
                     "code": "IF356",
@@ -770,7 +768,9 @@
                     "requisites": [
                         "IF347"
                     ],
-                    "status": "Pendiente"
+                    "status": "Cursando",
+                    "year": 2026,
+                    "period": "III"
                 },
                 {
                     "code": "IF350",
@@ -1009,7 +1009,8 @@
                     "requisites": [
                         "CR501"
                     ],
-                    "status": "Cursando",
+                    "status": "Aprobado",
+                    "grade": 100,
                     "year": 2026,
                     "period": "III"
                 }
